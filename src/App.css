@@ -1,0 +1,9 @@
+
+.header{
+    background-image: url("./assets/images/myHeroBg.png");
+}
+.webdev-img{
+    background-image: url("./assets/images/WebDevBg.png");
+    background-size: cover;
+}
+
