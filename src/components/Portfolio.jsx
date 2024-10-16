@@ -6,15 +6,18 @@ import pic3 from "../assets/images/BabyNameGen-SHOT.png"
 
 
 const images = [
-   pic1,pic2,pic3
-  
+    { image: pic1, description: "Website for Flamingo SPA and Salon.", path: "" },
+    { image: pic2, description: "Website for Real Estate Company.", path: "" },
+    { image: pic3, description: "Web App that generates random baby names based on specified gender.", path: "" },
+    //    pic1,pic2,pic3
+
 ];
-const portLinks =[
+const portLinks = [
     "https://benny-dav.github.io/FlamingoSPAandSalon/",
     "https://benny-dav.github.io/real-estate/",
     "https://benny-dav.github.io/BabyNameGenerator/"
 ];
-const portTexts =[
+const portTexts = [
     "Website for Flamingo SPA and Salon.",
     "Website for Real Estate Company.",
     "Web App that generates random baby names based on specified gender."
@@ -26,7 +29,7 @@ const Portfolio = () => {
 
             <div>
                 <Slider images={images} links={portLinks} descriptions={portTexts} />
-               
+
             </div>
 
         </section>

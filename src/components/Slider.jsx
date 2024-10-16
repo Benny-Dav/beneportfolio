@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const Slider = ({ images,links}) => {
+const Slider = ({ images,links, descriptions}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Move to the next slide
@@ -90,16 +90,16 @@ const Slider = ({ images,links}) => {
         >
           <a href={links[index]} target = "_blank">
           <img
-            src={image}
+            src={image.image}
             alt={`Slide ${index}`}
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
           </a>
-          {/* <div className=' h-[3em] border'>
-            <a href={descriptions[index]} target='_blank'>
-              <p>{descriptions}</p>
+          <div className=' h-[3em] border'>
+            <a href={image.path} target='_blank'>
+              <p>{image.description}</p>
             </a>
-          </div> */}
+          </div>
         </div>
       ))}
       
