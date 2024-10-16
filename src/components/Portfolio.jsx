@@ -6,29 +6,29 @@ import pic3 from "../assets/images/BabyNameGen-SHOT.png"
 
 
 const images = [
-    { image: pic1, description: "Website for Flamingo SPA and Salon.", path: "" },
-    { image: pic2, description: "Website for Real Estate Company.", path: "" },
-    { image: pic3, description: "Web App that generates random baby names based on specified gender.", path: "" },
-    //    pic1,pic2,pic3
+    { image: pic1,
+      description: "Website for Flamingo SPA and Salon.", 
+      path: "https://benny-dav.github.io/FlamingoSPAandSalon/" },
+
+    { image: pic2, 
+      description: "Website for Real Estate Company.", 
+      path: "https://benny-dav.github.io/real-estate/" },
+
+    { image: pic3, 
+      description: "Web App that generates random baby names based on specified gender.", 
+      path: "https://benny-dav.github.io/BabyNameGenerator/" },
+   
 
 ];
-const portLinks = [
-    "https://benny-dav.github.io/FlamingoSPAandSalon/",
-    "https://benny-dav.github.io/real-estate/",
-    "https://benny-dav.github.io/BabyNameGenerator/"
-];
-const portTexts = [
-    "Website for Flamingo SPA and Salon.",
-    "Website for Real Estate Company.",
-    "Web App that generates random baby names based on specified gender."
-];
+
+
 const Portfolio = () => {
     return (
         <section className="h-[100vh] mb-[3em]">
             <h2 className="text-[2em] font-bold text-center">My Portfolio</h2>
 
             <div>
-                <Slider images={images} links={portLinks} descriptions={portTexts} />
+                <Slider images={images} />
 
             </div>
 

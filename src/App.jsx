@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
 import Webdev from './components/WebDevInfo';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Webdev />
       <Skills />
       <Portfolio/>
+      <Contact/>
       <Footer/>
     </>
   )
