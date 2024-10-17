@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <section className="h-[100vh]">
+    <section id="contact-section" className="h-[100vh]">
         <h2 className="text-center font-bold text-[1.5em] mb-[0.5em]">Get in Touch</h2>
         <p className="w-[60%] ml-[20%] text-center mb-[1em]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ab quibusdam id totam debitis soluta fugiat nam a nemo dolorum sapiente, </p>
         <div className="h-[60%] w-[70%] ml-[15%] border rounded-2xl flex">

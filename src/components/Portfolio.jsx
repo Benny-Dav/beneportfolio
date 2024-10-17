@@ -24,10 +24,10 @@ const images = [
 
 const Portfolio = () => {
     return (
-        <section className="h-[100vh] mb-[3em]">
-            <h2 className="text-[2em] font-bold text-center">My Portfolio</h2>
+        <section id="portfolio-section" className="h-[100vh] mb-[3em]">
+            <h2 id="portfolio-h2" className="text-[2em] font-bold text-center">My Portfolio</h2>
 
-            <div>
+            <div id="slider-area">
                 <Slider images={images} />
 
             </div>

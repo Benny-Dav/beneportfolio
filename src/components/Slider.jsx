@@ -28,7 +28,9 @@ const Slider = ({ images,links, descriptions}) => {
     <div className="mt-[2em] relative w-[70%] h-[500px] ml-[15%] border" >
       {/* Prev button */}
       <button
+      id="arrow-left"
         onClick={prevSlide}
+        
         style={{
             width:"5%",
             height:"20%",
@@ -51,7 +53,9 @@ const Slider = ({ images,links, descriptions}) => {
 
       {/* Next button */}
       <button
+      id="arrow-right"
         onClick={nextSlide}
+        
         style={{
             width:"5%",
             height:"20%",
@@ -69,7 +73,7 @@ const Slider = ({ images,links, descriptions}) => {
           cursor: 'pointer',
         }}
       >
-       <FontAwesomeIcon icon={faArrowRight}/>
+       <FontAwesomeIcon  icon={faArrowRight}/>
       </button>
 
       {/* Images */}
