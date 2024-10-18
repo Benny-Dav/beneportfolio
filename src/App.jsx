@@ -41,7 +41,7 @@ function App() {
       <Webdev />
       <Skills />
       <Portfolio/>
-      {/* <Contact/> */}
+      <Contact/>
       <Footer/>
     </>
   )
