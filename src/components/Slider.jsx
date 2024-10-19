@@ -92,7 +92,7 @@ const Slider = ({ images,links, descriptions}) => {
             
           }}
         >
-          <a href={images.path} target = "_blank">
+          <a href={image.path} target = "_blank">
           <img
             src={image.image}
             alt={`Slide ${index}`}
@@ -101,7 +101,7 @@ const Slider = ({ images,links, descriptions}) => {
           </a>
           <div className=' h-[3em] border'>
             
-              <p>{image.description}</p>
+              <p className="text-center text-[1.5em] font-bold">{image.description}</p>
          
           </div>
         </div>

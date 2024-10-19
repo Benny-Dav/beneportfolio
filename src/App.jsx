@@ -18,7 +18,7 @@ function App() {
   //   },
   //   {
   //     path:"/about",
-  //     element:<About/>
+  //     element:<<WebDev>
   //   },
   //   {
   //     path:"/skills",
@@ -27,6 +27,10 @@ function App() {
   //   {
   //     path:"/portfolio",
   //     element:<Portfolio/>
+  //   },
+  //   {
+  //     path:"/contact",
+  //     element:<Contact/>
   //   },
   //   {
   //     path:"/footer",

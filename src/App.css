@@ -6,6 +6,11 @@
     background-image: url("./assets/images/WebDevBg.png");
     background-size: cover;
 }
+#contact-img{
+    background-image: url("./assets//images//contactAiImg.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 @media only screen and (max-width:480px){
     #Navbar{
