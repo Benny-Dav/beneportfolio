@@ -17,19 +17,19 @@ const images = [
     },
     {
         image: pic3,
-        description: "Web App that generates random baby names based on specified gender.",
+        description: "Web App that generates random baby names by gender.",
         path: "https://benny-dav.github.io/BabyNameGenerator/"
     },
 ];
 
 const Portfolio = () => {
     return (
-        <section id="portfolio-section" className="h-auto lg:h-[100vh] mb-12">
+        <section id="portfolio-section" className="lg:h-[100vh] mb-[5%]">
             <h2 id="portfolio-h2" className="text-[2em] lg:text-[2.5em] font-bold text-center mb-6">
                 My Portfolio
             </h2>
 
-            <div id="slider-area" className="w-full flex justify-center">
+            <div id="slider-area" className="w-full lg:ml-auto lg:mr-auto lg:h-[60%]">
                 <Slider images={images} />
             </div>
         </section>

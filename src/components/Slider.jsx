@@ -25,7 +25,7 @@ const Slider = ({ images,links, descriptions}) => {
   }, []);
 
   return (
-    <div className="mt-[2em] relative w-[70%] h-[500px] ml-[15%] border" >
+    <div className="mt-[2em] relative w-[70%] h-[400px] ml-[15%] border" >
       {/* Prev button */}
       <button
       id="arrow-left"

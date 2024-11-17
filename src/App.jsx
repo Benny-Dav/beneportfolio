@@ -8,6 +8,8 @@ import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
 import Webdev from './components/WebDevInfo';
 import Contact from './components/Contact';
+import { ToastContainer } from 'react-toastify';
+
 
 
 function App() {
@@ -49,6 +51,8 @@ function App() {
       <Footer/>
     </>
   )
+
 }
 
+<ToastContainer/>
 export default App;

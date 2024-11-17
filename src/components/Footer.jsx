@@ -2,6 +2,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import ClickToCall from "./ClickToCall";
+import MapLocation from "./MapLocation";
 
 const Footer = () => {
     return (
@@ -31,11 +33,10 @@ const Footer = () => {
                         benedictadavour777@gmail.com
                     </p>
                     <p className="flex items-center justify-center mb-1">
-                        <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                        0595742231
+                        <ClickToCall/>0595742231
                     </p>
                     <p className="flex items-center justify-center mb-1">
-                        <FontAwesomeIcon icon={faLocationDot} className="mr-2" />
+                        <MapLocation/>
                         Osu, Accra
                     </p>
                 </div>
