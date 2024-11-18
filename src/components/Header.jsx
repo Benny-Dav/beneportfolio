@@ -25,8 +25,8 @@ const Header = () => {
                 </p>
                 <div id="header-btns" className="flex flex-col lg:flex-row gap-4 mt-6 lg:mt-8 lg:w-[70%] justify-center lg:justify-start">
                     <a  target="_blank"
-                        href="../assets/CV Benedicta Davour.pdf"
-                        download="BenedictaDavour-CV.pdf"
+                        href="../assets/Benedicta Edinam Ami Davour Resume.pdf"
+                        download="Benedicta Davour Resume.pdf"
                         rel="noopener noreferrer"
                     >
                         <button className="h-12 w-full lg:w-32 rounded-sm bg-[#DC143C] text-white font-bold">
