@@ -15,7 +15,7 @@ const Header = () => {
                 />
             </div>
             {/* Header Content */}
-            <div id="header" className="lg:h-[90%] mt-[5%] w-full lg:w-[50%] pt-[5%] lg:px-0 lg:ml-[10%] text-center lg:text-left lg:mt-[3%]">
+            <div id="header" className="lg:h-[90%] mt-[5%] w-[90%] lg:w-[50%] pt-[5%] lg:px-0 lg:ml-[10%] text-center lg:text-left lg:mt-[3%]">
                 <h1 className="text-[2.5em] lg:text-[3em] font-bold leading-tight">
                     Hi! I'm Bened<span className="text-[#DC143C]">i</span>cta Davour
                 </h1>
