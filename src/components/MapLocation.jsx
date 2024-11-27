@@ -13,7 +13,7 @@ const MapLocation = () => {
     <li>
       <FontAwesomeIcon
         icon={faLocationDot}
-        className="text-[1.2em] cursor-pointer"
+        className="text-[1.2em] mr-[0.5em] cursor-pointer"
         onClick={toggleMap}
       />
       {showMap && (

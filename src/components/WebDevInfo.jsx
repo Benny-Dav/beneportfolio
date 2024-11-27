@@ -1,29 +1,38 @@
+
+import codingGif from "../assets/images/codingGif.gif";
 const Webdev = () => {
     return (
-        <section
-            id="webdev-info"
-            className="lg:h-[100vh] lg:grid lg:grid-cols-2 lg:mx-auto max-w-full overflow-x-hidden"
+        <section id="webdev-info"
+            className="lg:px-[15%] mt-[5%] h-[70vh] lg:h-[100vh] overflow-x-hidden overflow-y-hidden lg:pt-[5%]"
         >
-            {/* Image Div */}
-            <div id="hi-there" className="w-full lg:h-[70%] bg-cover bg-center webdev-img ml-[20%]">
+            <div className="text-4xl text-center items-center justify-center font-bold lg:h-[10%] lg:mt-0 w-full bg-[#EE9C96] lg:mb-[1em] text-white rounded-xl shadow-md lg:flex hidden">
+                <h2>What I Do</h2>
+            </div>
+            <div className="grid grid-rows-2 lg:grid-cols-2 lg:mx-auto lg:max-w-full ">
+                {/* Image Div */}
+            <div id="" className="w-full lg:h-[70%] bg-cover bg-center bg-blue-500">
                 {/* Image or background image for webdev-img */}
+                <img src={codingGif} alt="" />
             </div>
 
             {/* Text Div */}
             <div id="hi-there-text" className="flex flex-col gap-y-4 w-full items-center lg:items-start text-center lg:text-left">
                 <div className="w-[90%] lg:w-[60%] mt-8 lg:mt-[15%]">
-                    <h2 className="hidden lg:block lg:font-bold lg:text-[1.6em] mb-4">
-                        Need a Website?<br /> I can help you.
+                    <h2 className=" lg:block font-bold text-[1.6em] mb-4">
+                        Need a Website?<br /> Let's Bring Your Vision to Life!
                     </h2>
-                    <p className="hidden lg:block lg:mb-4 lg:text-base">
-                        If you're looking for a portfolio website to boost your professional image, a landing-page-website for
-                        your product, or a website for your online store, I've got you covered.
+                    <p className=" lg:block mb-4 text-base">
+                    Whether you need a stunning portfolio to showcase your skills, an engaging landing page to highlight your product, or a professional website for your online store, I can turn your ideas into reality. Let's create a site that stands out and elevates your brand.
                     </p>
-                    <button className="lg:h-12 lg:w-32 lg:rounded-sm lg:text-white lg:font-medium lg:bg-black">
+                    <a href="#contact">
+                    <button className="lg:hidden h-12 w-full rounded-sm text-white font-medium bg-[#DC143C]">
                         Contact Me
                     </button>
+                    </a>
                 </div>
             </div>
+            </div>
+            
         </section>
     );
 };

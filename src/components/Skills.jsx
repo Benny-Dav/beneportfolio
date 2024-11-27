@@ -2,20 +2,21 @@ import { S } from "../constants";
 
 const Skills = () => {
     return (
-        <section id="skills-section" className="h-auto lg:h-[100vh] py-12 lg:py-16 bg-[#FFEFD5]">
-            <div
-                id="skills-flex"
-                className="h-full w-[90%] lg:w-[80%] mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12"
-            >
-                {/* Skills Text Section */}
-                <div id="skills-txt" className="w-full lg:w-[45%] text-center lg:text-left">
-                    <h1 className="text-[1.8em] lg:text-[2.5em] font-bold text-[#333] mb-4 tracking-wide">
-                        My Web Developer Skillset Includes...
-                    </h1>
+        <section id="skills-section" className="lg:bg-gradient-to-r from-[rgb(247,170,160)] h-auto lg:h-[100vh] py-12 lg:py-0 lg:overflow-y-hidden lg:px-[15%] px-[3%]">
+            <div className="flex text-4xl text-center items-center justify-center font-bold lg:h-[10%] lg:mt-0 w-full bg-[#EE9C96] lg:mb-[1em] text-white rounded-xl shadow-md ">
+                <h2>My Stacks</h2>
+            </div>
+            <div className="w-full lg:h-[15%] lg:w-full text-center pt-[2em] mb-[1em]">
+                    
                     <p className="text-lg lg:text-xl text-[#666]">
-                        I use a combination of these effective and up-to-date tools and technologies to create the best bespoke websites for my clients.
+                        I use a combination of these effective and up-to-date tools and technologies to create the best websites for my clients.
                     </p>
                 </div>
+            <div
+                className="h-full w-[90%] mx-auto flex flex-col justify-between items-center gap-8 "
+            >
+                {/* Skills Text Section */}
+                
 
                 {/* Skills Cards Section */}
                 <div id="skills-cards" className="w-full lg:w-[55%] grid grid-cols-2 gap-6 lg:gap-8">

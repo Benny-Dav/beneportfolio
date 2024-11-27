@@ -1,36 +1,36 @@
 import React from 'react';
-import Slider from "../components/Slider";
-import pic1 from "../assets/images/FlamingoSPA-SHOT.png";
-import pic2 from "../assets/images/ERNESTEstates-SHOT.png";
-import pic3 from "../assets/images/BabyNameGen-SHOT.png";
+import proj1 from "../assets/images/BarkBox.png";
+import proj3 from "../assets/images/BabyNameGen-SHOT.png";
 
-const images = [
+const projects = [
     {
-        image: pic1,
-        description: "Website for Flamingo SPA and Salon.",
-        path: "https://benny-dav.github.io/FlamingoSPAandSalon/"
+        image: proj1,
+        description: "BarkBoxGh",
+        path: "https://barkboxgh.netlify.app/"
     },
     {
-        image: pic2,
-        description: "Website for Real Estate Company.",
-        path: "https://benny-dav.github.io/real-estate/"
-    },
-    {
-        image: pic3,
+        image: proj3,
         description: "Web App that generates random baby names by gender.",
         path: "https://benny-dav.github.io/BabyNameGenerator/"
-    },
+    }
 ];
 
 const Portfolio = () => {
     return (
-        <section id="portfolio-section" className="lg:h-[100vh] mb-[5%]">
-            <h2 id="portfolio-h2" className="text-[2em] lg:text-[2.5em] font-bold text-center mb-6">
-                My Portfolio
-            </h2>
+        <section id="works" className="lg:h-[100vh] pt-[5%] mb-[5%] lg:overflow-y-hidden lg:px-[15%] px-[3%] bg-[#ffffff]">
+            <div className="text-4xl text-center items-center justify-center font-bold lg:h-[10%] lg:mt-0 w-full bg-[#EE9C96] mb-[1em] text-white rounded-xl shadow-md bg-">
+                <h2>My Work</h2>
+            </div>
 
-            <div id="slider-area" className="w-full lg:ml-auto lg:mr-auto lg:h-[60%]">
-                <Slider images={images} />
+            <div className='grid lg:grid-cols-2 grid-rows-auto gap-x-[5%] gap-y-[5%]'>
+                {projects.map((project,index)=>(
+                    <div key={index}>
+                        <img src={project.image} alt="" />
+                        <p>{project.description}</p>
+                        <a to={project.path} target="_blank" rel="noopener noreferrer" className='text-[#DC143C]'>Visit </a>
+                    </div>
+                ))
+                }
             </div>
         </section>
     );

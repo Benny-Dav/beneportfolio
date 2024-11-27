@@ -2,12 +2,34 @@
 html, body {
     overflow-x: hidden;
     max-width: 100%;
+    
+}
+body{
+    padding-top: 60px;
+    overflow-y: hidden;
 }
 
+@keyframes fade-in{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    
+}
+
+.animate-fade-in{
+    animation:fade-in 1.5s ease out;
+}
+/* 
 .header{
     background-image: url("./assets/images/myHeroBg.png");
     background-repeat: no-repeat;
-}
+} */
 .webdev-img{
     background-image: url("./assets/images/WebDevBg.png");
     background-size: cover;

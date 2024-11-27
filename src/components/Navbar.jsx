@@ -12,10 +12,12 @@ const Navbar = () => {
     };
 
     return (
-        <div id="Navbar" className="lg:h-[10%] w-full pr-[5%] flex justify-between lg:items-center p-4 lg:border shadow-md bg-white fixed top-0 left-0 right-0 z-10">
+        <div id="Navbar" className="lg:px-[15%] lg:h-[10%] w-full pr-[5%] flex justify-between lg:items-center p-4 lg:border shadow-md bg-white fixed top-0 left-0 right-0 z-10">
             {/* Logo */}
             <a href="#home">
-                <h1 className="text-[1.2em] font-extrabold">ami.</h1>
+            <h2 className="text-5xl font-extrabold mb-4 text-black">
+                        am<span className="text-[#DC143C]">i</span>
+                    </h2>
             </a>
 
             {/* Mobile Menu Icon */}
@@ -28,13 +30,13 @@ const Navbar = () => {
                 id="nav-ul"
                 className={`${
                     isOpen ? "flex" : "hidden"
-                } lg:flex flex-col lg:flex-row justify-between items-center w-full lg:w-[30%] font-bold absolute lg:static top-[10%] bg-white lg:bg-transparent p-4 lg:p-0 shadow-md lg:shadow-none z-0`}
+                } lg:flex flex-col lg:flex-row justify-between items-center w-full lg:w-[50%] font-bold absolute lg:static top-[10%] bg-white lg:bg-transparent p-4 lg:p-0 shadow-md lg:shadow-none z-0`}
             >
                 <li><a href="#home">Home</a></li>
                 <li><a href="#webdev-info">About</a></li>
                 <li><a href="#skills-section">Skills</a></li>
-                <li><a href="#portfolio-section">Portfolio</a></li>
-                <li><a href="#footer-section">Contact</a></li>
+                <li><a href="#works">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
                 
             </ul>
 

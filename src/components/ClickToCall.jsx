@@ -5,7 +5,7 @@ const ClickToCall = () => {
 
   return (
     <a href="tel:+233595742231">
-        <li><FontAwesomeIcon icon={faPhone} className="text-[1.2em] cursor-pointer" /></li></a>
+        <li><FontAwesomeIcon icon={faPhone} className="text-[1.2em] mr-[0.5em] cursor-pointer" /></li></a>
   )
 }
 export default ClickToCall;

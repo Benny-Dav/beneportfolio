@@ -35,22 +35,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact-section" className="lg:bg-[#FFEFD5] py-16 px-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg">
-        <div className="p-8 lg:p-16">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">Get in Touch</h2>
-          <p className="text-center text-gray-600 mb-8">
+    <section id="contact" className="flex items-center justify-center lg:bg-[#ffffff] h-[70vh] lg:h-[100vh] px-4">
+      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg">
+        <div className="p-4 lg:p-8 border-[rgb(247,170,160)] border-4">
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">Get in Touch</h2>
+          <p className="text-center text-gray-600 mb-4 text-sm">
             Have a question or want to work together? Send me a message below!
           </p>
           <form
             action="https://formspree.io/f/mldelera"
             onSubmit={handleSubmit}
             method="POST"
-            className="space-y-6"
+            className="space-y-4 "
           >
             {/* Full Name */}
             <div>
-              <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="name" className="block text-gray-700 font-medium mb-1 text-sm">
                 Full Name
               </label>
               <input
@@ -59,13 +59,13 @@ const Contact = () => {
                 name="name"
                 id="name"
                 placeholder="John Doe"
-                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
+                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2 text-sm"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="email" className="block text-gray-700 font-medium mb-1 text-sm">
                 Email
               </label>
               <input
@@ -74,13 +74,13 @@ const Contact = () => {
                 name="email"
                 id="email"
                 placeholder="you@example.com"
-                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
+                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2 text-sm"
               />
             </div>
 
             {/* Subject */}
             <div>
-              <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="subject" className="block text-gray-700 font-medium mb-1 text-sm">
                 Subject
               </label>
               <input
@@ -89,13 +89,13 @@ const Contact = () => {
                 name="subject"
                 id="subject"
                 placeholder="How can I help you?"
-                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
+                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2 text-sm"
               />
             </div>
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="message" className="block text-gray-700 font-medium mb-1 text-sm">
                 Message
               </label>
               <textarea
@@ -103,7 +103,7 @@ const Contact = () => {
                 name="message"
                 id="message"
                 placeholder="Your message here..."
-                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3 h-32 resize-none"
+                className="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#DC143C] focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2 text-sm h-24 resize-none"
               ></textarea>
             </div>
 
@@ -111,7 +111,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full flex items-center justify-center bg-[#DC143C] text-white font-bold py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition ${
+              className={`w-full flex items-center justify-center hover:bg-[#DC143C] text-white font-bold py-2 rounded-lg shadow-lg bg-black transition text-sm ${
                 loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
