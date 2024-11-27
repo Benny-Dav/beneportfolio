@@ -2,7 +2,7 @@ import { S } from "../constants";
 
 const Skills = () => {
     return (
-        <section id="skills-section" className="lg:bg-gradient-to-r from-[rgb(247,170,160)] h-auto lg:h-[100vh] py-12 lg:py-0 lg:overflow-y-hidden lg:px-[15%] px-[3%]">
+        <section id="skills-section" className="h-auto lg:h-[100vh] py-12 lg:py-0 lg:overflow-y-hidden lg:px-[15%] px-[3%]">
             <div className="flex text-4xl text-center items-center justify-center font-bold lg:h-[10%] lg:mt-0 w-full bg-[#EE9C96] lg:mb-[1em] text-white rounded-xl shadow-md ">
                 <h2>My Stacks</h2>
             </div>
