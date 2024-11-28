@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="flex items-center justify-center lg:bg-[#ffffff] h-[70vh] lg:h-[100vh] px-4">
+    <section id="contact" className="flex items-center justify-center lg:bg-[#ffffff] h-[100vh] lg:h-[100vh] px-4">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg">
         <div className="p-4 lg:p-8 border-[rgb(247,170,160)] border-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">Get in Touch</h2>

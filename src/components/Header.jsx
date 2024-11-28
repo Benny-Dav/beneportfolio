@@ -25,13 +25,14 @@ const Header = () => {
                 </p>
                 <div id="header-btns" className="flex flex-col lg:flex-row gap-4 mt-6 lg:mt-8 lg:w-[70%] justify-center lg:justify-start">
                     <a  target="_blank"
-                        href="../assets/Benedicta Edinam Ami Davour Resume.pdf"
-                        download="Benedicta Davour Resume.pdf"
+                        href="https://drive.google.com/uc?export=download&id=1jPA0aIoRnTpnQdutTRVOTr59yfoC2gVl"
+                        download="Benedicta_Davour_Resume.pdf"
                         rel="noopener noreferrer"
                     >
                         <button className="h-12 w-full lg:w-32 rounded-sm bg-[#DC143C] text-white font-bold">
                             Download CV
                         </button>
+                        {/* https://drive.google.com/file/d/1jPA0aIoRnTpnQdutTRVOTr59yfoC2gVl/view?usp=sharing */}
                     </a>
                     
                     <a href="#contact-section" className="hidden lg:block">
