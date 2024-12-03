@@ -3,11 +3,12 @@ import codingGif from "../assets/images/codingGif.gif";
 const Webdev = () => {
     return (
         <section id="webdev-info"
-            className="lg:px-[15%] mt-[5%] h-[100vh] lg:h-[100vh] overflow-x-hidden overflow-y-hidden lg:pt-[5%]"
+            className="lg:px-[15%] h-[100vh] lg:h-[100vh] overflow-x-hidden overflow-y-hidden lg:pt-[5%]"
         >
             <div className="text-4xl text-center items-center justify-center font-bold lg:h-[10%] lg:mt-0 w-full bg-[#EE9C96] lg:mb-[1em] text-white rounded-xl shadow-md lg:flex hidden">
                 <h2>What I Do</h2>
             </div>
+        
             <div className="grid grid-rows-2 lg:grid-cols-2 lg:mx-auto lg:max-w-full ">
                 {/* Image Div */}
             <div id="" className="w-full lg:h-[70%] bg-cover bg-center bg-blue-500">
