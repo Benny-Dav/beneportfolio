@@ -25,7 +25,7 @@ const Header = () => {
                 </p>
                 <div id="header-btns" className="flex flex-col lg:flex-row gap-4 mt-6 lg:mt-8 lg:w-[70%] justify-center lg:justify-start">
                     <a  target="_blank"
-                        href="https://drive.google.com/uc?export=download&id=1jPA0aIoRnTpnQdutTRVOTr59yfoC2gVl"
+                        href="https://drive.google.com/uc?export=download&id=1GaJ3YLrfIgVL7R2er3y45yVVwWM8Ba0F"
                         download="Benedicta_Davour_Resume.pdf"
                         rel="noopener noreferrer"
                     >
