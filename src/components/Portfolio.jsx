@@ -1,6 +1,6 @@
 import React from 'react';
 import proj1 from "../assets/images/BarkBox.png";
-import proj3 from "../assets/images/BabyNameGen-SHOT.png";
+import proj2 from "../assets/images/BabyNameGen-SHOT.png";
 
 const projects = [
     {
