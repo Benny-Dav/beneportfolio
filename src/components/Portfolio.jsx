@@ -9,10 +9,15 @@ const projects = [
         path: "https://barkboxgh.netlify.app/"
     },
     {
-        image: proj3,
+        image: proj2,
         description: "Web App that generates random baby names by gender.",
         path: "https://benny-dav.github.io/BabyNameGenerator/"
-    }
+    },
+    // {
+    //     image: proj3,
+    //     description: "30 Days of Javascript",
+    //     path: "https://benny-dav.github.io/BabyNameGenerator/"
+    // }
 ];
 
 const Portfolio = () => {
