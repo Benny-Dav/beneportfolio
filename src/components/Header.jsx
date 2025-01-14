@@ -4,10 +4,10 @@ import myHeroMobile from "../assets/images/myHeroMobile.png";
 import myHeroBg from "../assets/images/myHeroBg.png"
 const Header = () => {
     return (
-        <div id="#home" className="relative lg:px-[15%] h-[100vh] lg:w-full lg:h-[95vh] mt-0 header max-w-full overflow-x-hidden lg:grid lg:grid-cols-2 grid grid-cols-1 overflow-y-hidden lg:bg-gradient-to-r from-[rgb(247,170,160)] via-white to-white">
+        <div id="#home" className="relative lg:px-[15%] h-[100vh] lg:w-full lg:h-[95vh] mt-0 header max-w-full overflow-x-hidden lg:grid lg:grid-cols-2 grid grid-cols-1 overflow-y-hidden lg:bg-gradient-to-r from-[rgb(247,170,160)] via-white to-white ">
             <Navbar />
             {/* Mobile Image */}
-            <div className="lg:hidden h-[30%] mt-[2%]">
+            <div className="lg:hidden h-[20%] mt-[2%]">
                 <img 
                     src={myHeroMobile} 
                     alt="Benedicta Davour" 
@@ -15,7 +15,7 @@ const Header = () => {
                 />
             </div>
             {/* Header Content */}
-            <div className="lg:h-[70%] lg:mt-[5%] ml-auto mr-auto w-[90%] lg:w-full lg:pt-[25%] text-center lg:text-left animate-fade-in">
+            <div className="lg:h-[70%] mt-[-15%] lg:mt-[5%] ml-auto mr-auto w-[90%] lg:w-full lg:pt-[25%] text-center lg:text-left animate-fade-in">
                 <h1 className="text-[2.5em] lg:text-[3em] font-bold leading-tight">
                     Hi! I'm Bened<span className="text-[#DC143C]">i</span>cta Davour
                 </h1>

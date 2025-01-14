@@ -32,7 +32,7 @@ const Portfolio = () => {
                     <div key={index}>
                         <img src={project.image} alt="" />
                         <p>{project.description}</p>
-                        <a to={project.path} target="_blank" rel="noopener noreferrer" className='text-[#DC143C]'>Visit </a>
+                        <a href={project.path} target="_blank" rel="noopener noreferrer" className='text-[#DC143C]'>Visit </a>
                     </div>
                 ))
                 }

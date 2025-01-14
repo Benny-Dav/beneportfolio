@@ -9,16 +9,16 @@ const Webdev = () => {
                 <h2>What I Do</h2>
             </div>
         
-            <div className="grid grid-rows-2 lg:grid-cols-2 lg:mx-auto lg:max-w-full ">
+            <div className="grid grid-rows-2 lg:grid-cols-2 lg:mx-auto lg:max-w-full gap-x-[5%]">
                 {/* Image Div */}
-            <div id="" className="w-full lg:h-[70%] bg-cover bg-center bg-blue-500">
+            <div id="" className="w-full lg:h-[70%] bg-cover bg-center px-[10%]">
                 {/* Image or background image for webdev-img */}
-                <img src={codingGif} alt="" />
+                <img src={codingGif} alt="" className=""/>
             </div>
 
             {/* Text Div */}
             <div id="hi-there-text" className="flex flex-col gap-y-4 w-full items-center lg:items-start text-center lg:text-left">
-                <div className="w-[90%] lg:w-[60%] mt-8 lg:mt-[15%]">
+                <div className="w-[90%] lg:w-[80%] mt-8 lg:mt-[15%]">
                     <h2 className=" lg:block font-bold text-[1.6em] mb-4">
                         Need a Website?<br /> Let's Bring Your Vision to Life!
                     </h2>
