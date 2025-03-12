@@ -1,7 +1,9 @@
-import icon1 from "../assets/images/css3.png" ;
+import icon1 from "../assets/images/html5.png" ;
 import icon2 from "../assets/images/css3.png" ;
 import icon3 from "../assets/images/tailwind.svg" ;
 import icon4 from "../assets/images/react.png" ;
+import icon5 from "../assets/images/nextjs.png" ;
+import icon6 from "../assets/images/js.png" ;
 
 const T = {
     TABS : [
@@ -24,7 +26,7 @@ const T = {
 }
 export default T;
 
-export const S ={
+export const Stacks ={
     SKILLS :[
         {
             icon: icon1,
@@ -43,17 +45,19 @@ export const S ={
         },
         {
             icon: icon4,
-            text:"REACT"
+            text:"REACTJS"
+
+        },
+        {
+            icon: icon5,
+            text:"NEXTJS"
+
+        },
+        {
+            icon: icon6,
+            text:"JAVASCRIPT"
 
         },
 
     ]
 }
-
-// export const SlideText ={
-//     TEXTS:[
-//         {
-//             text:""
-//         }
-//     ]
-// }

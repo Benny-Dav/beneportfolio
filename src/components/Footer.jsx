@@ -21,9 +21,9 @@ const Footer = () => {
                 <div>
                     <h2 className="text-lg font-semibold mb-4">Contact Me</h2>
                     <ul className="space-y-2 text-sm">
-                        <li>📍 Osu Plot 7, Accra, GHANA</li>
-                        <li>📧 barkbox@gmail.com</li>
-                        <li>📞 +233 595 742 231</li>
+                        <li>📍 Lapaz, Accra, GHANA</li>
+                        <li>📧 benedictadavour777@gmail.com</li>
+                        
                     </ul>
                 </div>
 

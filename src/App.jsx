@@ -6,9 +6,11 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
-import Webdev from './components/WebDevInfo';
+
 import Contact from './components/Contact';
 import { ToastContainer } from 'react-toastify';
+import AboutMe from './components/AboutMe';
+import Experience from './components/Experience';
 
 
 
@@ -44,7 +46,8 @@ function App() {
   return (
     <>
       <Header />
-      <Webdev />
+      <AboutMe/>
+      <Experience/>
       <Skills />
       <Portfolio/>
       <Contact/>

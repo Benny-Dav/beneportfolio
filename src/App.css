@@ -1,13 +1,22 @@
+
 /* Prevent horizontal scroll on mobile */
+*{
+    font-family: 'Lora',serif;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Poppins',serif;
+}
+
 html, body {
     overflow-x: hidden;
     max-width: 100%;
     
 }
-body{
+/* body{
     padding-top: 60px;
     overflow-y: hidden;
-}
+} */
 
 @keyframes fade-in{
     from{
