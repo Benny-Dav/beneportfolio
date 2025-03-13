@@ -84,7 +84,7 @@ const Navbar = () => {
                     <div className="fixed inset-0 z-40 bg-black opacity-50" onClick={() => setIsOpen(false)}></div>
 
                     {/* Mobile Menu */}
-                    <div className="fixed top-0 left-0 w-[70%] h-[60%] bg-white z-50 transition-transform transform translate-x-0 shadow-md pt-8 font-bold flex flex-col overflow-y-auto gap-4">
+                    <div className="fixed top-0 left-0 w-[70%] h-[60%] bg-white z-50 transition-transform transform translate-x-0 shadow-md pt-8 font-bold flex flex-col overflow-y-auto gap-4 md:h-[90%]">
                         {/* Logo */}
                         <a href="#home">
                             <h2 className="text-5xl font-extrabold text-black">

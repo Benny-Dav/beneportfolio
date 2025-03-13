@@ -4,7 +4,7 @@ import download from "../assets/images/download.png";
 
 const Experience = () => {
     return (
-        <section id="experience" className='px-8 h-[80vh] lg:h-[100vh] w-full lg:flex lg:px-[8%] py-12'>
+        <section id="experience" className='px-8 h-[80vh] lg:h-[100vh] w-full lg:flex lg:px-[8%] py-12 md:h-[100vh]'>
             <div>
                 <h3 className="text-4xl lg:text-4xl font-bold leading-tight text-center lg:hidden">My Work Experience</h3>
             </div>

@@ -7,7 +7,7 @@ const Header = () => {
     
     return (
        <>
-        <div id="#home" className="relative lg:px-[8%] lg:pt-10 h-[100vh] lg:w-full lg:h-auto mt-0 header max-w-full overflow-x-hidden lg:grid lg:grid-cols-2 grid grid-cols-1 overflow-y-hidden ">
+        <div id="#home" className="relative lg:px-[8%] lg:pt-10 h-[100vh] lg:w-full lg:h-auto mt-0 header max-w-full overflow-x-hidden lg:grid lg:grid-cols-2 grid grid-cols-1 overflow-y-hidden">
             <Navbar />
             {/* Mobile Image */}
             {/* <div className="lg:hidden h-[20%] mt-[2%]">
@@ -19,17 +19,19 @@ const Header = () => {
             </div> */}
 
             {/* Header Content */}
-            <div className="lg:h-40 mt-[5vh] lg:mt-[20%] pt-16 ml-auto mr-auto w-[90%] lg:w-full text-center animate-fade-in">
-                <p className="text-center text-2xl mb-4"><span className="font-bold text-[#DC143C]">-</span>Hello</p>
+            <div className="lg:h-40 mt-[5vh] lg:mt-[20%] pt-16 ml-auto mr-auto w-[90%] lg:w-full text-center animate-fade-in md:mt-[-6%]">
+                <div>
+                    <p className="text-center text-2xl mb-4"><span className="font-bold text-[#DC143C]">-</span>Hello</p>
                 <h1 className="text-[2.5em] lg:text-[3em] font-bold leading-tight mb-2">
                     I'm Bened<span className="text-[#DC143C]">i</span>cta,
                 </h1>
                 <h1 className="text-[2em] lg:text-[3em]  leading-tight">
                     Frontend Developer
                 </h1>
+                </div>
 
                 {/* header buttons */}
-            <div id="header-btns" className="flex flex-col lg:flex-row gap-4 mt-6 lg:mt-8 w-[90%] justify-center rounded-full py-2 mx-auto text-lg">
+            <div id="header-btns" className="flex flex-col lg:flex-row gap-4 mt-6 lg:mt-8 w-[90%] justify-center rounded-full py-2 mx-auto text-lg md:mb-[17%]">
                     <a  target="_blank"
                         href="/Benedicta Edinam Ami Davour Resume.pdf"
                         download="Benedicta_Davour_Resume.pdf"

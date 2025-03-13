@@ -37,14 +37,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-8 h-[80vh] lg:h-[100vh] w-full lg:px-[12%] ">
+    <section id="contact" className="px-8 h-[80vh] lg:h-[100vh] w-full lg:px-[12%] md:h-[100vh]">
       <h3 className="text-4xl lg:text-4xl font-bold leading-tight text-center mb-6">Contact Me</h3>
       <div className="flex gap-8 ">
 
         {/* contact info */}
-        <div className="hidden lg:flex flex-col w-[50%] pt-16">
+        <div className="hidden lg:flex flex-col w-[50%] pt-16 md:hidden">
           {/* Contact Section */}
-          <div className="">
+          <div className="md:hidden">
             <h3 className="font-bold text-xl mb-8">Let's Connect & Collaborate</h3>
             <ul className="space-y-8 text-lg mb-8">
               <li>📍 Lapaz, Accra, GHANA</li>
@@ -89,7 +89,7 @@ const Contact = () => {
         </div>
 
         {/* form */}
-        <div className="p-4 lg:p-6 border-[#DC143C] border-4 ">
+        <div className="p-4 lg:p-6 border-[#DC143C] border-4 md:mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">Get in Touch</h2>
           <p className="text-center text-gray-600 mb-4 text-sm">
             Have a question or want to work together? Send me a message below!

@@ -27,7 +27,7 @@ const Skills = () => {
     };
 
     return (
-        <section id="skills" className="h-[70vh] lg:h-[100vh] lg:px-[8%] px-8 py-12 text-black">
+        <section id="skills" className="h-[70vh] lg:h-[100vh] lg:px-[8%] px-8 py-12 text-black md:h-[100vh]">
             {/* heading */}
             <div className="text-center flex flex-col gap-4 mb-12">
                 <h3 className="text-4xl lg:text-4xl font-bold leading-tight">My Skills</h3>

@@ -20,7 +20,7 @@ const projects = [
 const Portfolio = () => {
 
     return (
-        <section id="portfolio" className="h-[100vh] lg:px-[8%] px-8 py-12 ">
+        <section id="portfolio" className="h-[100vh] lg:px-[8%] px-8 py-12 md:mb-16">
             <h3 className="text-4xl lg:text-4xl font-bold leading-tight text-center mb-8">My Top Projects</h3>
 
             {/* <div className='grid lg:grid-cols-2 grid-rows-auto gap-x-[5%] gap-y-[5%] border'>
