@@ -44,7 +44,7 @@ const Contact = () => {
         {/* contact info */}
         <div className="hidden lg:flex flex-col w-[50%] pt-16 md:hidden">
           {/* Contact Section */}
-          <div className="md:hidden">
+          <div className="md:hidden lg:block">
             <h3 className="font-bold text-xl mb-8">Let's Connect & Collaborate</h3>
             <ul className="space-y-8 text-lg mb-8">
               <li>📍 Lapaz, Accra, GHANA</li>
