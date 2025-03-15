@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-8 h-[80vh] lg:h-[100vh] w-full lg:px-[12%] md:h-[100vh]">
+    <section id="contact" className="px-8 h-[90vh] lg:h-[100vh] w-full lg:px-[12%] md:h-[100vh]">
       <h3 className="text-4xl lg:text-4xl font-bold leading-tight text-center mb-6">Contact Me</h3>
       <div className="flex gap-8 ">
 
