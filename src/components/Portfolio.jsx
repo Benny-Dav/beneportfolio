@@ -1,26 +1,30 @@
 import React from 'react';
 import proj1 from "../assets/images/BarkBox.png";
-import proj2 from "../assets/images/BabyNameGen-SHOT.png";
+import proj2 from "../assets/images/oceanViewHotel.png";
 
 const projects = [
+    {
+        image: proj2,
+        title: "Hotel Management System",
+        description: "Hotel Website with Online Booking System and Concierge Services Request,and Admin Dashboard for booking and room management.",
+        path: "https://hotelsample1ovh.netlify.app/",
+        tags:["Room Booking", "Hotel Management", "Admin Dashboard"]
+    },
     {
         image: proj1,
         title: "BarkBoxGh",
         description: "An appointment booking app for dog owners to find and book appointments with vets and other dog professionals.",
-        path: "https://barkboxgh.netlify.app/"
-    },
-    // {
-    //     image: proj2,
-    //     description: "Web App that generates random baby names by gender.",
-    //     path: "https://benny-dav.github.io/BabyNameGenerator/"
-    // },
+        path: "https://barkboxgh.netlify.app/",
+        tags: ["Appointment Booking", "Dashboard"]
+    }
+    
 
 ];
 
 const Portfolio = () => {
 
     return (
-        <section id="portfolio" className="h-[100vh] lg:px-[8%] px-8 py-12 md:mb-16">
+        <section id="portfolio" className="min-h-screen lg:px-[8%] px-8 py-12">
             <h3 className="text-4xl lg:text-4xl font-bold leading-tight text-center mb-8">My Top Projects</h3>
 
             {/* <div className='grid lg:grid-cols-2 grid-rows-auto gap-x-[5%] gap-y-[5%] border'>
@@ -33,7 +37,7 @@ const Portfolio = () => {
                 ))
                 } */}
 
-            <div className=''>
+            <div className='space-y-8'>
                 {/* project card */}
                 {projects.map((project, index) => (
                     <div key={index} 
@@ -49,8 +53,9 @@ const Portfolio = () => {
                         <div className='flex flex-col  lg:px-6 mt-4'>
                             {/*tags */}
                             <div className='flex gap-4 text-white mb-8 '>
-                                <p className='border p-2 font-semibold bg-[#DC143C] rounded-xl'>Appointment Booking</p>
-                                <p className='border p-2 font-semibold bg-[#DC143C] rounded-xl'>Dashboard</p>
+                                {project.tags.map((tag,index)=>(
+                                    <p key={index} className='border p-2 font-semibold bg-[#DC143C] rounded-xl'>{tag}</p>
+                                ))}
 
                             </div>
                             {/* text */}

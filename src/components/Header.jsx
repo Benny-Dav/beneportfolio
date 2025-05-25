@@ -26,7 +26,7 @@ const Header = () => {
                     I'm Bened<span className="text-[#DC143C]">i</span>cta,
                 </h1>
                 <h1 className="text-[2em] lg:text-[3em]  leading-tight">
-                    Frontend Developer
+                    Frontend Engineer
                 </h1>
                 </div>
 

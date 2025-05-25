@@ -4,6 +4,7 @@ import icon3 from "../assets/images/tailwind.svg" ;
 import icon4 from "../assets/images/react.png" ;
 import icon5 from "../assets/images/nextjs.png" ;
 import icon6 from "../assets/images/js.png" ;
+import openaiIcon from "../assets/images/openai.png" ;
 
 const T = {
     TABS : [
@@ -58,6 +59,9 @@ export const Stacks ={
             text:"JAVASCRIPT"
 
         },
-
+        {
+            icon: openaiIcon,
+            text: "AI AGENTS"
+        },
     ]
 }
