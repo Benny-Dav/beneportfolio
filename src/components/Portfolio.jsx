@@ -23,9 +23,9 @@ const projects = [
     },
     {
         image: proj3,
-        title: "Payne Photography",
+        title: "PayneIV Photography",
             description: "A landing page website for a photographer to display their portfolio and allow users to schedule a session",
-            path: "https://paynephotography.netlify.app/",
+            path: "https://cerulean-sable-f1dd05.netlify.app/",
         tags: ["Session Scheduling", "Landing Page"],
         category: "Landing Pages"
     },
