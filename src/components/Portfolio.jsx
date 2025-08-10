@@ -21,14 +21,14 @@ const projects = [
         tags: ["Appointment Booking", "Dashboard"],
         category: "Web Applications"
     },
-    {
-        image: proj3,
-        title: "PayneIV Photography",
-            description: "A landing page website for a photographer to display their portfolio and allow users to schedule a session",
-            path: "https://cerulean-sable-f1dd05.netlify.app/",
-        tags: ["Session Scheduling", "Landing Page"],
-        category: "Landing Pages"
-    },
+    // {
+    //     image: proj3,
+    //     title: "PayneIV Photography",
+    //         description: "A landing page website for a photographer to display their portfolio and allow users to schedule a session",
+    //         path: "https://cerulean-sable-f1dd05.netlify.app/",
+    //     tags: ["Session Scheduling", "Landing Page"],
+    //     category: "Landing Pages"
+    // },
     {
         image: proj4,
         title: "Football Club Website",
