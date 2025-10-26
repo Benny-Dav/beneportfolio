@@ -13,14 +13,14 @@ const projects = [
         tags: ["Room Booking", "Hotel Management", "Admin Dashboard"],
         category: "Web Applications"
     },
-    // {
-    //     image: proj2,
-    //     title: "BarkBoxGh",
-    //     description: "An appointment booking app for dog owners to find and book appointments with vets and other dog professionals.",
-    //     path: "https://barkboxgh.netlify.app/",
-    //     tags: ["Appointment Booking", "Dashboard"],
-    //     category: "Web Applications"
-    // },
+     {
+         image: proj2,
+         title: "BarkBoxGh",
+         description: "An appointment booking app for dog owners to find and book appointments with vets and other dog professionals.",
+        path: "https://barkbox.netlify.app/",
+        tags: ["Appointment Booking", "Dashboard"],
+        category: "Web Applications"
+     },
     // {
     //     image: proj3,
     //     title: "PayneIV Photography",
