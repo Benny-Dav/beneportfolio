@@ -3,7 +3,8 @@ import proj2 from "../assets/images/BarkBox.png";
 import proj1 from "../assets/images/oceanViewHotel.png";
 import proj3 from "../assets/images/payne.png";
 import proj4 from "../assets/images/fc.png";
-
+import proj5 from "../assets/images/able.png;
+    
 const projects = [
     {
         image: proj1,
