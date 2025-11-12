@@ -13,6 +13,7 @@ const projects = [
         tags: ["Room Booking", "Hotel Management", "Admin Dashboard"],
         category: "Web Applications"
     },
+   
      {
          image: proj2,
          title: "BarkBoxGh",
@@ -36,6 +37,15 @@ const projects = [
             path: "https://demoforfc.netlify.app/",
         tags: ["Landing Page"],
         category: "Landing Pages"
+    },
+     {
+        image:proj5,
+        title:"AI Image Generation Tool",
+        description:"AI Image Generation tool Able ART AI, for image generation with image upload, prompt entry and theme selection, and a special Africon theme.",
+        path:"https://able-art-ai.vercel.app/",
+         tags:["AI Integration", "Image Generation", "Prompt Engineering"],
+         category: "Web Applications"
+         
     },
 ];
 
