@@ -40,7 +40,7 @@ const AboutMe = () => {
 
                     <button className="h-14 w-[50%] mx-auto lg:w-[30%] lg:mx-0 lg:px-4 px-2 rounded-full font-bold flex justify-center gap-2 items-center border-black border-2 ">
                         <a target="_blank"
-                            href="/Benedicta Edinam Ami Davour Resume.pdf"
+                            href="/Benedicta Davour Professional CV.pdf"
                             download="Benedicta_Davour_Resume.pdf"
                             rel="noopener noreferrer"
                             className="w-full"
