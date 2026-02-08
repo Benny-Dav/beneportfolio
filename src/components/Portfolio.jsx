@@ -48,6 +48,15 @@ const projects = [
          category: "Web Applications"
          
     },
+      {
+        image:proj6,
+        title:"One-Click Portfolio Website Builder",
+        description:"Upload your CV, let AI extract your information, edit as needed and get a link to your published website in seconds",
+        path:"https://corax-one-click-portfolio.vercel.app/",
+         tags:["AI Integration", "CV Parsing", "Landing Page Builder"],
+         category: "Web Applications"
+         
+    }
 ];
 
 const categories = ["All", "Landing Pages", "Web Applications"];
