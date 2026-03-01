@@ -33,8 +33,8 @@ const Header = () => {
                 {/* header buttons */}
             <div id="header-btns" className="flex flex-col lg:flex-row gap-4 mt-6 lg:mt-8 w-[90%] justify-center rounded-full py-2 mx-auto text-lg md:mb-[17%]">
                     <a  target="_blank"
-                        href="/Benedicta Davour Professional CV.pdf"
-                        download="Benedicta Davour Professional Resume.pdf"
+                        href="/Benedicta_Davour_Professional_Resume.pdf"
+                        download="Benedicta_Davour_CV.pdf"
                         rel="noopener noreferrer"
                         className="w-full"
                     >
