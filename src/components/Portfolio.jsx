@@ -4,7 +4,8 @@ import proj1 from "../assets/images/oceanViewHotel.png";
 import proj3 from "../assets/images/payne.png";
 import proj4 from "../assets/images/fc.png";
 import proj5 from "../assets/images/able.png";
-import proj6 from "../assets/images/ocp.png" ;   
+import proj6 from "../assets/images/ocp.png" ; 
+import proj7 from "../assets/images/kizo.png";
 const projects = [
     {
         image: proj1,
@@ -54,6 +55,15 @@ const projects = [
         description:"Upload your CV, let AI extract your information, edit as needed and get a link to your published website in seconds",
         path:"https://corax-one-click-portfolio.vercel.app/",
          tags:["AI Integration", "CV Parsing", "Landing Page Builder"],
+         category: "Web Applications"
+         
+    },
+    {
+        image:proj7,
+        title:"Ecommerce Website for KIZO Jewellery",
+        description:"Ecommerce website for jewellery vendor with admin platform for order and product management",
+        path:"https://kizo-azure.vercel.app/",
+         tags:["Ecommerce", "Admin Platform", "Landing Page"],
          category: "Web Applications"
          
     }
