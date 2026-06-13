@@ -595,15 +595,7 @@ const Home = () => {
                   Send the role, contract brief, or product problem. I will
                   review the context and respond with the next practical step.
                 </p>
-                <div className="mt-5 rounded-lg border border-[#E5E7EB] bg-[#F7F7F8] p-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#6B7280]">
-                    Appointment booking
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#4B5563]">
-                    A booking flow can be added here later. For now, email and
-                    LinkedIn keep hiring conversations direct and reliable.
-                  </p>
-                </div>
+                
                 <div className="mt-6 grid gap-3">
                   <Button href="mailto:benedictadavour777@gmail.com" className="w-full">
                     <Mail size={16} />
