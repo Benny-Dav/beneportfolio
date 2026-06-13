@@ -103,7 +103,7 @@ const Navbar = () => {
                         ))}
                     </div>
                     <div className="mt-5 grid gap-3">
-                        <Button href="/Benedicta_Davour_Professional_Resume.pdf" variant="secondary">
+                        <Button href="/Benedicta%20Davour%20-%20FullStack%20Developer%20CV.pdf" variant="secondary">
                             Resume
                         </Button>
                         <Button href="#hire-me" onClick={(e) => handleClick(e, "hire-me")}>

@@ -197,8 +197,8 @@ const Experience = () => {
                     <button className="h-12 px-8 rounded-full font-bold flex items-center gap-2 border-2 border-[#DC143C] text-[#DC143C] hover:bg-[#DC143C] hover:text-white transition-all duration-300 mx-auto shadow-lg hover:shadow-xl bg-white">
                         <a
                             target="_blank"
-                            href="/Benedicta Edinam Ami Davour Resume.pdf"
-                            download="Benedicta_Davour_Resume.pdf"
+                            href="/Benedicta%20Davour%20-%20FullStack%20Developer%20CV.pdf"
+                            download="Benedicta Davour - FullStack Developer CV.pdf"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2"
                         >

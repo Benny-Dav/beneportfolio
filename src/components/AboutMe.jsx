@@ -40,8 +40,8 @@ const AboutMe = () => {
 
                     <button className="h-14 w-[50%] mx-auto lg:w-[30%] lg:mx-0 lg:px-4 px-2 rounded-full font-bold flex justify-center gap-2 items-center border-black border-2 ">
                         <a target="_blank"
-                            href="/Benedicta_Davour_Professional_Resume.pdf"
-                            download="Benedicta_Davour_Resume.pdf"
+                            href="/Benedicta%20Davour%20-%20FullStack%20Developer%20CV.pdf"
+                            download="Benedicta Davour - FullStack Developer CV.pdf"
                             rel="noopener noreferrer"
                             className="w-full"
                         >

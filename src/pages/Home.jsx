@@ -103,9 +103,9 @@ const Home = () => {
               View Case Studies
             </Button>
             <Button
-              href="/Benedicta_Davour_Professional_Resume.pdf"
+              href="/Benedicta%20Davour%20-%20FullStack%20Developer%20CV.pdf"
               variant="secondary"
-              download="Benedicta_Davour_Resume.pdf"
+              download="Benedicta Davour - FullStack Developer CV.pdf"
             >
               <Download size={16} />
               Download Resume
@@ -626,8 +626,8 @@ const Home = () => {
                     View GitHub
                   </Button>
                   <Button
-                    href="/Benedicta_Davour_Professional_Resume.pdf"
-                    download="Benedicta_Davour_Resume.pdf"
+                    href="/Benedicta%20Davour%20-%20FullStack%20Developer%20CV.pdf"
+                    download="Benedicta Davour - FullStack Developer CV.pdf"
                     variant="secondary"
                     className="w-full"
                   >
