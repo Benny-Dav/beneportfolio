@@ -263,7 +263,7 @@ const Home = () => {
             Case Studies
           </p>
           <h2 className="text-[28px] font-bold leading-tight text-[#111111] md:text-4xl">
-            Featured project evidence
+            Featured projects
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-[#4B5563] md:text-base md:leading-7">
             Find more information on each project in the case study deck.
