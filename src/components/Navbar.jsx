@@ -1,8 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import Button from "./ui/Button";
 
-const sections = ["home", "about", "experience", "skills", "portfolio", "contact"];
+const sections = [
+    { id: "home", label: "Home" },
+    { id: "outcomes", label: "Outcomes" },
+    { id: "case-studies", label: "Case Studies" },
+    { id: "experience", label: "Experience" },
+    { id: "skills", label: "Skills" },
+    { id: "hire-me", label: "Contact" },
+];
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,20 +21,20 @@ const Navbar = () => {
 
     const handleClick = (e, section) => {
         e.preventDefault();
-        document.getElementById(section).scrollIntoView({ behavior: "smooth" });
+        document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
         setActiveSection(section);
-        setIsOpen(false); // Close mobile menu on click
+        setIsOpen(false);
     };
 
     useEffect(() => {
         const handleScroll = () => {
             let currentSection = "home";
-            sections.forEach((section) => {
-                const sectionElement = document.getElementById(section);
+            sections.forEach(({ id }) => {
+                const sectionElement = document.getElementById(id);
                 if (sectionElement) {
                     const rect = sectionElement.getBoundingClientRect();
                     if (rect.top <= 150 && rect.bottom >= 150) {
-                        currentSection = section;
+                        currentSection = id;
                     }
                 }
             });
@@ -40,75 +47,72 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="lg:px-[5%] lg:h-[10%] h-[10vh] w-[90%] pr-[5%] flex justify-between lg:items-center p-4 lg:border shadow-md bg-white fixed top-0 lg:top-4 left-0 right-0 mx-auto lg:rounded-full z-40">
-            <a href="#home">
-                <h2 className="text-5xl font-extrabold text-black">
+        <>
+        <header className="fixed top-0 z-[80] h-16 w-full border-b border-[#E5E7EB] bg-white md:h-[72px]">
+            <nav className="mx-auto flex h-full max-w-6xl items-center justify-between px-5 md:px-8">
+                <a href="#home" onClick={(e) => handleClick(e, "home")} className="text-4xl font-extrabold text-[#111111]">
                     am<span className="text-[#DC143C]">i</span>
-                </h2>
-            </a>
+                </a>
 
-            <button className="lg:hidden" onClick={toggleMenu}>
-                <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className="text-[1.5em]" />
-            </button>
-
-            {/* Desktop nav links */}
-            <ul className="hidden lg:flex flex-col lg:flex-row justify-between items-center w-full lg:w-[40%] font-bold absolute lg:static top-[10%] bg-white lg:bg-transparent p-4 lg:p-0 shadow-md lg:shadow-none z-0">
-                {sections.map((section) => (
-                    <li key={section}>
+                <div className="hidden items-center gap-7 md:flex">
+                    {sections.map((section) => (
                         <a
-                            href={`#${section}`}
-                            onClick={(e) => handleClick(e, section)}
-                            className={activeSection === section ? "text-[#DC143C]" : "text-black"}
+                            key={section.id}
+                            href={`#${section.id}`}
+                            onClick={(e) => handleClick(e, section.id)}
+                            className={`text-sm font-bold transition-colors ${
+                                activeSection === section.id ? "text-[#DC143C]" : "text-[#4B5563] hover:text-[#111111]"
+                            }`}
                         >
-                            {section.charAt(0).toUpperCase() + section.slice(1)}
+                            {section.label}
                         </a>
-                    </li>
-                ))}
-            </ul>
+                    ))}
+                </div>
 
-            <ul className="hidden lg:flex justify-between items-center gap-4 w-[15%]">
-                <a href="mailto:benedictadavour777@gmail.com">
-                    <li><FontAwesomeIcon icon={faEnvelope} className="text-[1.2em]" /></li>
-                </a>
-                <a href="#contact" className="hidden lg:block">
-                    <button className="lg:h-10 lg:w-32 lg:text-white lg:font-bold lg:bg-[#DC143C] rounded-full">
+                <div className="hidden md:block">
+                    <Button href="#hire-me" onClick={(e) => handleClick(e, "hire-me")} className="h-10 px-4">
                         Hire Me
-                    </button>
-                </a>
-            </ul>
+                    </Button>
+                </div>
 
-            {/* Mobile nav menu */}
+                <button
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#E5E7EB] md:hidden"
+                    onClick={toggleMenu}
+                    aria-label="Open navigation menu"
+                >
+                    {isOpen ? <X size={22} /> : <Menu size={22} />}
+                </button>
+            </nav>
+
+        </header>
+
             {isOpen && (
-                <>
-                    {/* Dark overlay */}
-                    <div className="fixed inset-0 z-40 bg-black opacity-50" onClick={() => setIsOpen(false)}></div>
-
-                    {/* Mobile Menu */}
-                    <div className="fixed top-0 left-0 w-[70%] h-[60%] bg-white z-50 transition-transform transform translate-x-0 shadow-md pt-8 font-bold flex flex-col overflow-y-auto gap-4 md:h-[90%]">
-                        {/* Logo */}
-                        <a href="#home">
-                            <h2 className="text-5xl font-extrabold text-black">
-                                am<span className="text-[#DC143C]">i</span>
-                            </h2>
-                        </a>
-
-                        {/* Mobile Navigation Links */}
+                <div className="fixed inset-x-0 bottom-0 top-16 z-[70] overflow-y-auto bg-white px-5 py-6 shadow-2xl md:hidden">
+                    <div className="flex flex-col gap-2">
                         {sections.map((section) => (
-                            <div
-                                key={section}
-                                className={`text-xl px-4 py-2 border-b border-[#333] flex items-center h-16 ${
-                                    activeSection === section ? "text-[#DC143C]" : "text-black"
+                            <a
+                                key={section.id}
+                                href={`#${section.id}`}
+                                onClick={(e) => handleClick(e, section.id)}
+                                className={`rounded-lg border border-[#E5E7EB] px-4 py-4 text-lg font-bold ${
+                                    activeSection === section.id ? "bg-[#FDECEF] text-[#DC143C]" : "text-[#111111]"
                                 }`}
                             >
-                                <a href={`#${section}`} onClick={(e) => handleClick(e, section)}>
-                                    {section.charAt(0).toUpperCase() + section.slice(1)}
-                                </a>
-                            </div>
+                                {section.label}
+                            </a>
                         ))}
                     </div>
-                </>
+                    <div className="mt-5 grid gap-3">
+                        <Button href="/Benedicta_Davour_Professional_Resume.pdf" variant="secondary">
+                            Resume
+                        </Button>
+                        <Button href="#hire-me" onClick={(e) => handleClick(e, "hire-me")}>
+                            Hire Me
+                        </Button>
+                    </div>
+                </div>
             )}
-        </div>
+        </>
     );
 };
 

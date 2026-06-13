@@ -1,69 +1,69 @@
-import React from 'react';
-import instagram from "../assets/images/instagram.png";
-import linkedin from "../assets/images/linkedin.png";
-import github  from "../assets/images/github.png";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
     return (
-        <footer className="w-full bg-[#F7AAA0] text-[#333] px-[10%]">
-            <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* About Section */}
+        <footer className="w-full border-t border-[#E5E7EB] bg-white px-5 md:px-8">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 py-10 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
-                    <h2 className="text-4xl font-bold mb-4 text-black">
+                    <h2 className="mb-4 text-4xl font-extrabold text-[#111111]">
                         am<span className="text-[#DC143C]">i</span>
                     </h2>
-                    <p className="text-sm leading-relaxed">
-                        Building the future one website at a time.
+                    <p className="max-w-xs text-sm leading-6 text-[#4B5563]">
+                        Building business-focused web products, AI tools, booking
+                        workflows, ecommerce flows, and dashboards.
                     </p>
                 </div>
 
-                {/* Contact Section */}
                 <div>
-                    <h2 className="text-lg font-semibold mb-4">Contact Me</h2>
-                    <ul className="space-y-2 text-sm">
-                        <li>📍 Lapaz, Accra, GHANA</li>
-                        <li>📧 benedictadavour777@gmail.com</li>
-                        
+                    <h2 className="mb-4 text-lg font-bold">Contact</h2>
+                    <ul className="space-y-3 text-sm text-[#4B5563]">
+                        <li>Accra, Ghana</li>
+                        <li>
+                            <a className="hover:text-[#DC143C]" href="mailto:benedictadavour777@gmail.com">
+                                benedictadavour777@gmail.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                {/* Social Media Links */}
                 <div>
-                    <h2 className="text-lg font-semibold mb-4">Follow Me</h2>
-                    <div className="flex space-x-4">
-                       
-                        {/* <a
-                            href="#"
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#DC143C] hover:bg-[#DC143C] hover:text-white transition"
-                            
-                        >
-                            <img src={instagram} alt="" />
-                        </a> */}
-
+                    <h2 className="mb-4 text-lg font-bold">Links</h2>
+                    <div className="flex space-x-3">
                         <a
                             href="https://www.linkedin.com/in/eba-davour"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#DC143C] hover:bg-[#DC143C] hover:text-white transition"
-                            
+                            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#E5E7EB] text-[#111111] transition hover:border-[#DC143C] hover:text-[#DC143C]"
+                            aria-label="LinkedIn"
                         >
-                            <img src={linkedin} alt="" />
+                            <Linkedin size={18} />
                         </a>
                         <a
                             href="https://github.com/Benny-Dav"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#DC143C] hover:bg-[#DC143C] hover:text-white transition"
-                            
+                            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#E5E7EB] text-[#111111] transition hover:border-[#DC143C] hover:text-[#DC143C]"
+                            aria-label="GitHub"
                         >
-                            <img src={github} alt="" />
+                            <Github size={18} />
+                        </a>
+                        <a
+                            href="mailto:benedictadavour777@gmail.com"
+                            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#E5E7EB] text-[#111111] transition hover:border-[#DC143C] hover:text-[#DC143C]"
+                            aria-label="Email"
+                        >
+                            <Mail size={18} />
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div className="border-t border-gray-300 mt-8 py-4 text-center">
-                <p className="text-xs text-gray-700">&copy; 2024 am<span className="text-[#DC143C]">i</span>. All rights reserved.</p>
+            <div className="border-t border-[#E5E7EB] py-4 text-center">
+                <p className="text-xs text-[#6B7280]">
+                    &copy; 2024-{currentYear} Benedicta Davour. All rights reserved.
+                </p>
             </div>
         </footer>
     );

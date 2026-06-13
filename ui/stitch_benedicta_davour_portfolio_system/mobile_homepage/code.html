@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benedicta Davour | Frontend Engineer &amp; Product Builder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b4",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#d9e3f4",
+                        "surface-bright": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#e6bdbc",
+                        "surface-container": "#e5eeff",
+                        "tertiary-container": "#ce3448",
+                        "on-primary-fixed": "#40000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#121c28",
+                        "surface-tint": "#bf0030",
+                        "on-surface": "#121c28",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "outline": "#916f6e",
+                        "on-secondary-container": "#656464",
+                        "primary-fixed": "#ffdad9",
+                        "surface-variant": "#d9e3f4",
+                        "surface-container-high": "#dfe9fa",
+                        "secondary": "#5f5e5e",
+                        "tertiary-fixed": "#ffdada",
+                        "primary-container": "#dc143c",
+                        "on-tertiary-fixed-variant": "#920024",
+                        "surface-dim": "#d1dbec",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary-container": "#fff1f0",
+                        "surface": "#f8f9ff",
+                        "on-tertiary-fixed": "#40000b",
+                        "secondary-container": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#eef4ff",
+                        "inverse-primary": "#ffb3b3",
+                        "on-primary-fixed-variant": "#920022",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-surface": "#27313e",
+                        "tertiary": "#ab1832",
+                        "on-tertiary-container": "#fff1f1",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary": "#b1002c",
+                        "on-surface-variant": "#5c3f3f",
+                        "primary-fixed-dim": "#ffb3b3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max-width": "1200px",
+                        "section-padding-lg": "120px",
+                        "nav-height-mobile": "64px",
+                        "section-padding-sm": "64px",
+                        "nav-height-desktop": "72px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Inter"],
+                        "body-large": ["Inter"],
+                        "body-base": ["Inter"],
+                        "display-hero-mobile": ["Inter"],
+                        "section-title-mobile": ["Inter"],
+                        "section-title": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "metadata": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-line {
+            animation: slideLine 3s infinite linear;
+            background: linear-gradient(90deg, transparent, #DC143C, transparent);
+            background-size: 200% 100%;
+        }
+        @keyframes slideLine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-base antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-[nav-height-mobile] bg-surface z-50 border-b border-outline-variant flex items-center">
+<div class="max-w-container-max-width mx-auto w-full px-gutter flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">am<span class="text-primary-container">i</span></span>
+</div>
+<button class="p-2" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+</div>
+</header>
+<!-- Mobile Navigation Drawer (Overlay) -->
+<div class="fixed inset-0 z-[60] hidden" id="mobile-menu">
+<div class="absolute inset-0 bg-on-surface/20 backdrop-blur-sm" onclick="toggleMenu()"></div>
+<div class="absolute right-0 top-0 bottom-0 w-[80%] bg-surface p-8 flex flex-col gap-6 shadow-xl">
+<div class="flex justify-between items-center mb-4">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold">ami</span>
+<button onclick="toggleMenu()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="text-primary font-bold text-section-title-mobile font-section-title-mobile" href="#home">Home</a>
+<a class="text-on-surface text-section-title-mobile font-section-title-mobile" href="#outcomes">Outcomes</a>
+<a class="text-on-surface text-section-title-mobile font-section-title-mobile" href="#case-studies">Case Studies</a>
+<a class="text-on-surface text-section-title-mobile font-section-title-mobile" href="#experience">Experience</a>
+<a class="text-on-surface text-section-title-mobile font-section-title-mobile" href="#writing">Writing</a>
+<a class="text-on-surface text-section-title-mobile font-section-title-mobile" href="#contact">Contact</a>
+</nav>
+</div>
+</div>
+<main class="pt-[nav-height-mobile]">
+<!-- Hero Section -->
+<section class="px-gutter py-section-padding-sm flex flex-col gap-8" id="home">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">FRONTEND ENGINEER + PRODUCT BUILDER</span>
+<h1 class="font-display-hero-mobile text-display-hero-mobile">Building business-critical web products that help teams launch, sell, and operate better.</h1>
+<p class="font-body-large text-body-large text-secondary">I build AI tools, booking systems, ecommerce flows, and dashboards that turn complex business workflows into fast, responsive web experiences.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="bg-primary-container text-on-primary-container h-14 flex items-center justify-center rounded-lg font-bold transition-all hover:bg-tertiary-container" href="#case-studies">View Case Studies</a>
+<a class="border border-outline bg-white text-on-surface h-14 flex items-center justify-center rounded-lg font-bold hover:bg-surface-container-low" href="#">Download Resume</a>
+</div>
+<!-- Proof Chips -->
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="bg-surface-container-low text-on-surface px-4 py-2 rounded-full font-metadata text-metadata border border-outline-variant">10+ shipped projects</span>
+<span class="bg-surface-container-low text-on-surface px-4 py-2 rounded-full font-metadata text-metadata border border-outline-variant">AI product interfaces</span>
+<span class="bg-surface-container-low text-on-surface px-4 py-2 rounded-full font-metadata text-metadata border border-outline-variant">Complex dashboards</span>
+</div>
+<!-- Visual Portrait -->
+<div class="mt-8 rounded-xl overflow-hidden aspect-[4/5] relative bg-surface-container-high shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a confident Black female frontend engineer with a warm, expert expression. She is set against a clean, minimal white background that matches the light-mode corporate aesthetic of the website. The lighting is soft and professional, highlighting her business-ready persona. The image conveys technical mastery, leadership, and a modern, high-end professional tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK_OiD07AbXswpKGzEeTj7vExBnwBiFqfxmSVw6rc7j8RMFItQV8kSZ8mGiVY_nBmglvCWVupmkyvf2aR2qus4tjaAXTh_hTMgsGAXHkCZxyl4VYtqBonOihTVuMe5bBc9dDa8v0_zkN8D_bLMaCMMH2bXYxLOdojHqAChi1Im8YYx3iAt-vwD7zp9aa3xwvahkhi729ws79hwUAYQT83-iQwxLezMz2e02RnhPZsiMoCK9ubxx8q1x2LGpXZyKAtiL_BtDEYFG4g"/>
+</div>
+</section>
+<!-- Proof Bar (2x2 Grid) -->
+<section class="bg-surface-container-lowest py-12 px-gutter border-y border-outline-variant">
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary leading-none">10+</span>
+<span class="font-metadata text-metadata text-secondary">Shipped projects</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary leading-none">3+</span>
+<span class="font-metadata text-metadata text-secondary">Industries</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary leading-none">AI+</span>
+<span class="font-metadata text-metadata text-secondary">Dashboards</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary leading-none">React</span>
+<span class="font-metadata text-metadata text-secondary">Firebase</span>
+</div>
+</div>
+</section>
+<!-- Outcomes Section -->
+<section class="px-gutter py-section-padding-sm bg-surface" id="outcomes">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-8">What I Help Businesses Improve</h2>
+<div class="grid gap-4">
+<div class="bg-white p-6 border border-outline-variant rounded-xl flex flex-col gap-3 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+<h3 class="font-bold text-lg">Increase conversions</h3>
+<p class="text-secondary text-sm">Optimizing UI flows and checkout processes to reduce friction and bounce rates.</p>
+</div>
+<div class="bg-white p-6 border border-outline-variant rounded-xl flex flex-col gap-3 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">settings_suggest</span>
+<h3 class="font-bold text-lg">Reduce manual work</h3>
+<p class="text-secondary text-sm">Automating repetitive administrative tasks through custom-built internal tools.</p>
+</div>
+<div class="bg-white p-6 border border-outline-variant rounded-xl flex flex-col gap-3 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+<h3 class="font-bold text-lg">Launch faster</h3>
+<p class="text-secondary text-sm">Turning high-fidelity prototypes into production-ready code with efficient frontend architectures.</p>
+</div>
+<div class="bg-white p-6 border border-outline-variant rounded-xl flex flex-col gap-3 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">sentiment_satisfied</span>
+<h3 class="font-bold text-lg">Improve customer experience</h3>
+<p class="text-secondary text-sm">Creating accessible and intuitive interfaces that delight users and build loyalty.</p>
+</div>
+</div>
+</section>
+<!-- Featured Case Studies -->
+<section class="px-gutter py-section-padding-sm bg-surface-container-low" id="case-studies">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-2">Featured Case Studies</h2>
+<p class="text-secondary mb-8">Products, workflows, and business tools I have built.</p>
+<div class="flex flex-col gap-10">
+<!-- Case Study 1 -->
+<div class="flex flex-col gap-6">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-high border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A sophisticated dashboard interface for an AI-powered automation platform. The UI is clean and professional, featuring crisp data visualizations, sidebar navigation, and a modern light-mode palette of whites and soft grays. Occasional red accents highlight key actions. The overall aesthetic is corporate, minimalist, and technologically advanced, suggesting efficiency and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDe0Lgv1n0fW8NW0rKlJ6380nKU4j1JA_BpwVMgyf_Ss4cUuLbwUTwDXY8JsqNfsEG_1uhxlH6pojbFgnFAwVq7mTpCAmU9BQA8f98oduJBSMqA4gFl5_pZuEAIT8kXLQ9zYuS1lfzDNvwWGKWGKM3baxOHqwyvNrz2p_9OigZaRuru0EUdXRmX8KJ_38KWdvovzNSjuqdgGRcTE2QsWQKVbaxNesmWA67dUB-hA3_wr_bFQM8VhaAErTe1SGSqi5I0ADMWqYHJ3U"/>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-section-title-mobile text-xl">One-Click Portfolio (AI Automation)</h3>
+<p class="text-on-surface/80">Business Problem: Hiring managers spend hours manual-scraping talent data. Value: 70% reduction in review time.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#FDECEF] text-primary px-2 py-1 rounded text-xs font-semibold">React</span>
+<span class="bg-[#FDECEF] text-primary px-2 py-1 rounded text-xs font-semibold">OpenAI API</span>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 mt-2" href="#">View Full Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Case Study 2 -->
+<div class="flex flex-col gap-6">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-high border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A sleek hotel management software interface shown on a high-resolution display. The screen shows room booking calendars, revenue charts, and guest management tools. The design uses a refined corporate aesthetic with plenty of whitespace and clear typography. Primary colors are subtle grays with sharp red calls to action, maintaining a premium hospitality-industry feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPSh4Gk_7LEbSgfOggg2MQjO-GK3_4Buu9rxbTgOtga11FNtLd5GqdT4Cbifuz8s0NJh_nooGtRUUKjWT03YAc_Y2X1RPov_ZIy98RO75ey4oV17V4ab_UmX9XW8YV4sK66y5mzWz1srkcvew5-GlrfBHJZK0GVGAGUPeKdalSqX6KaJuIedGKKtJY8Ag3aL_Vo_Gr5MgUf58g5l00ok4vPrMVRPQHWhXy7isBRcXBOpxI3CE9OTSgrP4L9Uba6KJ_ErcMYnqEopE"/>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-section-title-mobile text-xl">Hotel Management System</h3>
+<p class="text-on-surface/80">Business Problem: Legacy booking systems were slow and led to double bookings. Value: Zero booking errors in 12 months.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#FDECEF] text-primary px-2 py-1 rounded text-xs font-semibold">Tailwind CSS</span>
+<span class="bg-[#FDECEF] text-primary px-2 py-1 rounded text-xs font-semibold">Firebase</span>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 mt-2" href="#">View Full Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Case Study 3 -->
+<div class="flex flex-col gap-6">
+<div class="aspect-video rounded-xl overflow-hidden bg-surface-container-high border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A minimalist ecommerce experience for a luxury jewellery brand. The interface is high-end, focusing on exquisite product photography with clean typography and a simple navigation structure. The design uses a white background with thin borders and sophisticated red accent buttons. The overall look is professional, high-fashion, and structurally perfect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1UDAm0YgBhmmaX8gpXrUPXYvGj6MOzDo7o2JEbjBydD7KkSTZ6BqcxL-LBhdS_7BgNRlKn9fprx3xC-Apx6hQ5kh2uCsS9O6CpJc8hjrTCWB7C2Nl4k_eEK55RztB6alsf_4MZQxjVOsqDHOpkBwPBv8v66qtioi8j6rRGlv3do9O_kXfCHxvvZbYv4h2U-vNHby9J8FqHldZbgn7TrX3bn6gMdTa3kpI2kETSsn5jYW1QNn995sshOtWneLQOSxVwULmC8CSlrI"/>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-section-title-mobile text-xl">KIZO Jewellery Ecommerce</h3>
+<p class="text-on-surface/80">Business Problem: High bounce rates on product pages due to poor load times. Value: 40% increase in checkout completions.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#FDECEF] text-primary px-2 py-1 rounded text-xs font-semibold">Next.js</span>
+<span class="bg-[#FDECEF] text-primary px-2 py-1 rounded text-xs font-semibold">Stripe</span>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 mt-2" href="#">View Full Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="px-gutter py-section-padding-sm bg-surface" id="experience">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-8">Experience built around useful products</h2>
+<div class="flex flex-col gap-10">
+<!-- Africon -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg">Senior Frontend Developer</h3>
+<span class="text-primary font-semibold">Africon</span>
+</div>
+<span class="text-secondary text-sm">2021 — Present</span>
+</div>
+<p class="text-secondary">Leading the frontend architecture for business intelligence tools serving the African manufacturing sector.</p>
+<ul class="flex flex-col gap-2 border-l-2 border-outline-variant pl-4 py-1">
+<li class="text-sm">• Migrated legacy dashboard to React 18</li>
+<li class="text-sm">• Implemented real-time data streaming</li>
+</ul>
+</div>
+<!-- MEST -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg">Software Engineer</h3>
+<span class="text-primary font-semibold">MEST Africa</span>
+</div>
+<span class="text-secondary text-sm">2019 — 2021</span>
+</div>
+<p class="text-secondary">Engineered internal CRM systems and student management tools for Africa's leading tech incubator.</p>
+<ul class="flex flex-col gap-2 border-l-2 border-outline-variant pl-4 py-1">
+<li class="text-sm">• Scaled platform to 500+ daily active users</li>
+<li class="text-sm">• Developed custom CSS component library</li>
+</ul>
+</div>
+<!-- Highlight Line Animation -->
+<div class="relative py-4">
+<div class="h-px w-full bg-outline-variant relative overflow-hidden">
+<div class="absolute inset-0 active-nav-line"></div>
+</div>
+<p class="text-primary font-bold text-xs uppercase tracking-widest mt-4">Currently highlighting: AI trip builder interfaces</p>
+</div>
+</div>
+</section>
+<!-- Capabilities -->
+<section class="px-gutter py-section-padding-sm bg-surface-container-highest">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-8">Capabilities</h2>
+<div class="flex flex-col gap-3">
+<div class="bg-white p-4 rounded-lg flex items-center justify-between border border-outline-variant">
+<span class="font-bold">Frontend Engineering</span>
+<span class="material-symbols-outlined text-primary">code</span>
+</div>
+<div class="bg-white p-4 rounded-lg flex items-center justify-between border border-outline-variant">
+<span class="font-bold">Product UI/UX</span>
+<span class="material-symbols-outlined text-primary">palette</span>
+</div>
+<div class="bg-white p-4 rounded-lg flex items-center justify-between border border-outline-variant">
+<span class="font-bold">AI Integration</span>
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<div class="bg-white p-4 rounded-lg flex items-center justify-between border border-outline-variant">
+<span class="font-bold">Business Operations Tools</span>
+<span class="material-symbols-outlined text-primary">business_center</span>
+</div>
+<div class="bg-white p-4 rounded-lg flex items-center justify-between border border-outline-variant">
+<span class="font-bold">Rapid MVP Delivery</span>
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+</div>
+</div>
+</section>
+<!-- Writing Preview -->
+<section class="px-gutter py-section-padding-sm bg-surface" id="writing">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-8">Writing</h2>
+<div class="flex flex-col gap-6">
+<div class="group">
+<span class="text-primary font-bold text-xs uppercase">Frontend Architecture</span>
+<h3 class="font-bold text-xl mt-1 mb-2 group-hover:text-primary transition-colors">Building Scalable Dashboards with React</h3>
+<p class="text-secondary text-sm line-clamp-2">How to structure your frontend project for maximum maintainability and long-term business value...</p>
+</div>
+<div class="group">
+<span class="text-primary font-bold text-xs uppercase">Product Strategy</span>
+<h3 class="font-bold text-xl mt-1 mb-2 group-hover:text-primary transition-colors">Why Your MVP Needs a Design System</h3>
+<p class="text-secondary text-sm line-clamp-2">Avoiding technical debt by implementing structural visual tokens before the first line of business logic...</p>
+</div>
+<div class="group">
+<span class="text-primary font-bold text-xs uppercase">AI in Tech</span>
+<h3 class="font-bold text-xl mt-1 mb-2 group-hover:text-primary transition-colors">Integrating OpenAI into Enterprise Tools</h3>
+<p class="text-secondary text-sm line-clamp-2">Lessons learned from deploying AI-powered automation workflows in high-stakes environments...</p>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="px-gutter py-section-padding-sm bg-on-surface text-white">
+<div class="flex flex-col gap-8">
+<div>
+<h2 class="font-section-title-mobile text-section-title-mobile text-white mb-4">Designing for the whole ecosystem</h2>
+<p class="text-white/70">I don't just build pages; I build business solutions that account for every stakeholder.</p>
+</div>
+<div class="grid gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container shrink-0">check_circle</span>
+<div>
+<h4 class="font-bold mb-1">For Users</h4>
+<p class="text-white/70 text-sm">Fast, accessible, and intuitive interfaces that minimize cognitive load.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container shrink-0">check_circle</span>
+<div>
+<h4 class="font-bold mb-1">For Admins</h4>
+<p class="text-white/70 text-sm">Powerful internal tools that make managing complex data effortless.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container shrink-0">check_circle</span>
+<div>
+<h4 class="font-bold mb-1">For Business</h4>
+<p class="text-white/70 text-sm">Scalable architecture that supports growth and reduces future rework cost.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-gutter py-section-padding-sm bg-surface" id="contact">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-2">Start the Conversation</h2>
+<p class="text-secondary mb-8">Ready to build something impactful? Let's discuss your project.</p>
+<form class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-metadata text-metadata text-on-surface/70">Full Name</label>
+<input class="border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-metadata text-metadata text-on-surface/70">Email Address</label>
+<input class="border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="john@company.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-metadata text-metadata text-on-surface/70">Project Type</label>
+<select class="border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none bg-white">
+<option>AI Tool Development</option>
+<option>Dashboard / SaaS</option>
+<option>Ecommerce Flow</option>
+<option>Full Product Launch</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-metadata text-metadata text-on-surface/70">Timeline</label>
+<input class="border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="e.g. 3 months" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-metadata text-metadata text-on-surface/70">Budget</label>
+<input class="border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="$5k - $10k" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-metadata text-metadata text-on-surface/70">Message</label>
+<textarea class="border border-outline-variant rounded-lg p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="Tell me about your business goals..." rows="4"></textarea>
+</div>
+<button class="bg-primary-container text-on-primary-container h-14 rounded-lg font-bold mt-2" type="submit">Send Message</button>
+</form>
+<div class="flex justify-center gap-8 mt-12">
+<a class="text-secondary hover:text-primary transition-colors font-bold" href="#">LinkedIn</a>
+<a class="text-secondary hover:text-primary transition-colors font-bold" href="#">GitHub</a>
+<a class="text-secondary hover:text-primary transition-colors font-bold" href="#">Upwork</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-8 px-gutter border-t border-outline-variant">
+<div class="max-w-container-max-width mx-auto flex flex-col items-center gap-4">
+<span class="font-label-caps text-label-caps font-bold text-on-surface">AMI — PRODUCT &amp; FRONTEND</span>
+<p class="font-metadata text-metadata text-secondary text-center">© Benedicta Davour. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Active link logic
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.onscroll = () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold');
+                link.classList.add('text-on-surface');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-primary', 'font-bold');
+                    link.classList.remove('text-on-surface');
+                }
+            });
+        };
+    </script>
+</body></html>

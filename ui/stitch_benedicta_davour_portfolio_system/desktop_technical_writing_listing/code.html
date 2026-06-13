@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Writing | Benedicta Davour</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3b4",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-container-highest": "#d9e3f4",
+                      "surface-bright": "#f8f9ff",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e6bdbc",
+                      "surface-container": "#e5eeff",
+                      "tertiary-container": "#ce3448",
+                      "on-primary-fixed": "#40000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#121c28",
+                      "surface-tint": "#bf0030",
+                      "on-surface": "#121c28",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-error": "#ffffff",
+                      "background": "#f8f9ff",
+                      "outline": "#916f6e",
+                      "on-secondary-container": "#656464",
+                      "primary-fixed": "#ffdad9",
+                      "surface-variant": "#d9e3f4",
+                      "surface-container-high": "#dfe9fa",
+                      "secondary": "#5f5e5e",
+                      "tertiary-fixed": "#ffdada",
+                      "primary-container": "#dc143c",
+                      "on-tertiary-fixed-variant": "#920024",
+                      "surface-dim": "#d1dbec",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary-container": "#fff1f0",
+                      "surface": "#f8f9ff",
+                      "on-tertiary-fixed": "#40000b",
+                      "secondary-container": "#e5e2e1",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#eef4ff",
+                      "inverse-primary": "#ffb3b3",
+                      "on-primary-fixed-variant": "#920022",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-surface": "#27313e",
+                      "tertiary": "#ab1832",
+                      "on-tertiary-container": "#fff1f1",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "primary": "#b1002c",
+                      "on-surface-variant": "#5c3f3f",
+                      "primary-fixed-dim": "#ffb3b3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max-width": "1200px",
+                      "section-padding-lg": "120px",
+                      "nav-height-mobile": "64px",
+                      "section-padding-sm": "64px",
+                      "nav-height-desktop": "72px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Inter"],
+                      "body-large": ["Inter"],
+                      "body-base": ["Inter"],
+                      "display-hero-mobile": ["Inter"],
+                      "section-title-mobile": ["Inter"],
+                      "section-title": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "metadata": ["Inter"]
+              },
+              "fontSize": {
+                      "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .article-card:hover { border-color: #D1D5DB; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-[64px] md:h-[72px] bg-surface border-b border-outline-variant z-50">
+<div class="max-w-container-max-width mx-auto px-gutter h-full flex justify-between items-center">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">ami</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-body-base text-body-base text-secondary hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-base text-body-base text-secondary hover:text-primary transition-colors duration-200" href="#">Outcomes</a>
+<a class="font-body-base text-body-base text-secondary hover:text-primary transition-colors duration-200" href="#">Case Studies</a>
+<a class="font-body-base text-body-base text-primary font-bold" href="#">Writing</a>
+</nav>
+<button class="font-body-base text-body-base text-primary font-medium hover:opacity-80 transition-opacity">Contact</button>
+</div>
+</header>
+<main class="pt-[nav-height-desktop] pb-section-padding-lg">
+<!-- Hero Section: Featured Article -->
+<section class="max-w-container-max-width mx-auto px-gutter pt-section-padding-sm md:pt-16 pb-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5">
+<span class="font-label-caps text-label-caps text-primary mb-4 block uppercase tracking-widest">Featured Publication</span>
+<h1 class="font-display-hero text-display-hero text-on-surface mb-6">Thoughts on Software Architecture.</h1>
+<p class="font-body-large text-body-large text-secondary mb-8">Exploring the intersection of frontend engineering, product strategy, and scalable technical documentation.</p>
+</div>
+<div class="lg:col-span-7">
+<div class="group relative bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden article-card cursor-pointer">
+<div class="aspect-video w-full overflow-hidden">
+<img alt="Featured Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, high-angle shot of a minimalist workspace with a sleek laptop displaying complex lines of code. The environment is flooded with soft, natural morning light, emphasizing a professional and focused atmosphere. The color palette is dominated by whites and grays with subtle primary red highlights on the screen's syntax highlighting. The style is modern corporate minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB57L5XV4g-sBnfN2_dj2DdUK99Qs3QxWymDiiGZXP0gMsZI_wtDSx07RPTxW_EPGwD176cA5CmbEIkI5Z0QwNQZd-n6nSPPUlZ9SgsYbfYY79af-225h3JhRf3o_hWrt0_dQjE_rlAtLLXFyozZVrUl1ADGbe1uqFbYcUxh9ZsZiX8tsHFgzSMlNzjm4WqJWlnngerHqtcpb4lkPVFH2r-Owdgkg1sjGsmyenvOMcWoZq_mIS1PP38KUlk7UGU90ndrugXeHAJ9kQ"/>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-1 bg-[#FDECEF] text-[#A30F2D] text-[12px] font-semibold rounded-[6px]">Engineering</span>
+<span class="font-metadata text-metadata text-secondary">May 12, 2024 • 12 min read</span>
+</div>
+<h2 class="font-section-title text-section-title mb-4 group-hover:text-primary transition-colors">Scaling Frontend Systems: A Pragmatic Approach</h2>
+<p class="font-body-base text-body-base text-secondary mb-6 line-clamp-2">How to maintain velocity in large-scale React applications without sacrificing performance or architectural integrity. We dive deep into state management, component isolation, and documentation patterns.</p>
+<a class="inline-flex items-center gap-2 font-body-base text-primary font-bold" href="#">
+                                Read Article
+                                <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Filter Bar -->
+<section class="max-w-container-max-width mx-auto px-gutter mb-12">
+<div class="flex flex-col md:flex-row gap-4 items-center justify-between py-6 border-y border-outline-variant">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface border border-outline-variant rounded-lg focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Search articles..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+<button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">All</button>
+<button class="px-4 py-2 bg-surface-container border border-outline-variant text-secondary rounded-lg text-sm font-medium hover:bg-surface-variant">Design</button>
+<button class="px-4 py-2 bg-surface-container border border-outline-variant text-secondary rounded-lg text-sm font-medium hover:bg-surface-variant">Engineering</button>
+<button class="px-4 py-2 bg-surface-container border border-outline-variant text-secondary rounded-lg text-sm font-medium hover:bg-surface-variant">Strategy</button>
+</div>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden article-card flex flex-col h-full">
+<div class="aspect-[16/9] w-full bg-surface-variant relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph of a computer monitor displaying organized terminal windows and code snippets. The lighting is low-key with sharp, focused points of red light from system status indicators. The composition is highly structured and geometric, reflecting a technical and efficient coding environment. The overall mood is sophisticated and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4FFnFo4IBsulS89XaVdUpr8B5fZ11ARmWVv6LR_-M7KCIpsGjc5RUYJp1qGYbzn29XL5UkBIItGD_5wCWA-9sQsmByGm-1sHdC204VDRamLFJSZKqRFlv1osVt8W9gbfj3-hryILJytqYCRmVChPTcu4VkQ0ABKzsIwthrSCPqlHBoTdGOSX8Z53HwqJmjbQe3QsYRIzRHOYTZw8RymXm34FSRrZxnyfsZ_qtdlvRvoGauYKilaC1ARUZb1AEhk-OC5MFmDq201o"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 bg-[#FDECEF] text-[#A30F2D] text-[11px] font-semibold rounded-[6px]">Engineering</span>
+<span class="font-metadata text-metadata text-secondary">8 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-3 group-hover:text-primary transition-colors">The Art of Semantic HTML</h3>
+<p class="font-body-base text-body-base text-secondary mb-6 flex-grow">Why structural integrity in markup is the foundation of accessible and SEO-friendly web products.</p>
+<a class="inline-flex items-center gap-2 font-metadata text-primary font-bold group/link" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden article-card flex flex-col h-full">
+<div class="aspect-[16/9] w-full bg-surface-variant relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, flat-lay photography setup of a white notebook with precise architectural drawings and a high-end metal pen. The background is a textured light gray surface. The lighting is bright and even, creating a sense of clarity and purpose. The aesthetic is professional and strategic, aligning with high-level product design thinking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6sPB5S0j3Klr71sbqJlT6SYPxw7uYuh6PJELXJprJmoRHDK9u-ARPEcoxFVGDejw6XCxdLaA-b3bK4ccU2xHdLGCyvV4xIO649Ogz304AyVSOW7dcmQEodLR_WK2gXvZRxw7epZg1Bk-FTCShI335lkZV7CWDT7kFuirrWayTcbyyUtDYVMgzL3mrlKYr54Ovj2YKWXJJn2CdLQ_on1Mvokxt-WmNaTRYLJM9PkFWrUwzStVQSf6SAF79MDShC16fpFgfVpa0y7U"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 bg-[#FDECEF] text-[#A30F2D] text-[11px] font-semibold rounded-[6px]">Strategy</span>
+<span class="font-metadata text-metadata text-secondary">15 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-3 group-hover:text-primary transition-colors">Bridging Design and Dev</h3>
+<p class="font-body-base text-body-base text-secondary mb-6 flex-grow">Strategies for creating high-fidelity handoffs and maintaining design system consistency across teams.</p>
+<a class="inline-flex items-center gap-2 font-metadata text-primary font-bold group/link" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden article-card flex flex-col h-full">
+<div class="aspect-[16/9] w-full bg-surface-variant relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A data visualization dashboard displayed on a high-resolution screen with vibrant red and dark blue charts. The scene is shot from a slight angle in a modern, dark-themed office space. The lighting highlights the crispness of the UI elements. The mood is analytical, data-driven, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAA0HQpo_E00jfu7nj4M1ce05lliziKOPnto1NVmbnvfqN3Igp1CETSkVACQ1xNqLjU5TB-Sag_1WgaX_g4TsHmkpEqkLCM3trj_-G_lpxrVVBPPmzQK2TKXsqxP7Rwc1u_FA4xKqbJCvfwyognpBYVd8G3h70-epDqX-pfsjoKm_iIWbbetQorR1EcyGgKgY7U7A1QygUE0xrOBjLtJRUrq6SO4B5pGBKrc0oSnj_rd1GYE85A2MhDNRFj4KWnfD2vuQ6MUbUrR4"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 bg-[#FDECEF] text-[#A30F2D] text-[11px] font-semibold rounded-[6px]">Analytics</span>
+<span class="font-metadata text-metadata text-secondary">6 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-3 group-hover:text-primary transition-colors">Measuring Product Impact</h3>
+<p class="font-body-base text-body-base text-secondary mb-6 flex-grow">How to use technical metrics to drive product decisions and prove ROI of engineering efforts.</p>
+<a class="inline-flex items-center gap-2 font-metadata text-primary font-bold group/link" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden article-card flex flex-col h-full">
+<div class="aspect-[16/9] w-full bg-surface-variant relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylized digital representation of global data networks with glowing lines connecting points on a dark background. Occasional flashes of primary red indicate nodes of high activity. The visual style is abstract, high-tech, and globally scaled, evoking a sense of interconnected modern infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApN84kn5flA6uJDPYfRDL1fI4PmKjclf_Kg6w7byxWS1R1tjNaZrL5kgQNr3yTboz19Chf0ki2Ce_mbf-CUAt4fgOfuLBdfQyR-YOctE59P95zrkqtq71RqmIh5NzbV0uok5DHAH24p6-fSiTqfaNBbuzcv23PnrorLtu8xSKZ_8JJXGOqgz-gspVlhQc-CUuT17_rUYDussC3F2WkspKD8mYF-06jy1K_8mh1YKgXwHhwqhiEXQ6XML0BpRFSEHVrQiKUQ0oO42E"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 bg-[#FDECEF] text-[#A30F2D] text-[11px] font-semibold rounded-[6px]">Infrastructure</span>
+<span class="font-metadata text-metadata text-secondary">10 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-3 group-hover:text-primary transition-colors">Modern CI/CD Pipelines</h3>
+<p class="font-body-base text-body-base text-secondary mb-6 flex-grow">Streamlining deployment workflows for frontend teams using GitHub Actions and Vercel.</p>
+<a class="inline-flex items-center gap-2 font-metadata text-primary font-bold group/link" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden article-card flex flex-col h-full">
+<div class="aspect-[16/9] w-full bg-surface-variant relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean studio shot of a mechanical keyboard and a high-end mouse on a felt mat. The focus is on the textures and precision of the hardware. The color palette is minimal, using blacks, whites, and metallic grays with a small red escape key for contrast. The style is sharp and emphasizes professional tools of the trade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaNkGNMvpzBw9ZDHuIcPkE8rO5urd_FGcz7eNjHkznodj2I80AQoHGoPs3hx3Foc6w5voFioT7SPpEFoCtzwUeJEVth6xVqQhI_y94_74I6ihjqTHpTpCngq_JWXqAZPc5aP-WfuNtPsMs800DTJ9rSkw2DRE81TZZK8wE80jyTX57PnfOdJCpntuWszvHdCAvRDoO1QmbG-lvkCPMUVYf_a8AuRfaWUjf4H5hUZqRMnagZoDrmHfdRkzLrpf7ptCNySKkHOucI7Q"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 bg-[#FDECEF] text-[#A30F2D] text-[11px] font-semibold rounded-[6px]">Career</span>
+<span class="font-metadata text-metadata text-secondary">5 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-3 group-hover:text-primary transition-colors">Engineering to Consulting</h3>
+<p class="font-body-base text-body-base text-secondary mb-6 flex-grow">Transitioning from a code-first mindset to a business-value mindset as a senior developer.</p>
+<a class="inline-flex items-center gap-2 font-metadata text-primary font-bold group/link" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden article-card flex flex-col h-full">
+<div class="aspect-[16/9] w-full bg-surface-variant relative">
+<img alt="Article Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A workspace featuring a modern workstation with multiple monitors. One screen shows a detailed UI design while another displays a text editor with documentation. The lighting is soft and diffuse. The layout is organized and clean, symbolizing a multidisciplinary approach to technical work. Sophisticated corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxZC3HmGpRTTFvFn8UCRUcApHFe6HiaRgNNC8yIKvokJ-3D1IB4oFKYGiiqJkfHAkeRMb1X5rSF9ADmieNKzUXdxRXilZu7hbgvjue7AOolPJKu3PDvlIIAtzYOnbmc5OXHqguU1fT1XCrWOtgd4E_nFPV7S61L6FkVUrQqXiI1QGUGV9t28deeJHovlE7HwLQibu07NFwBTzojSahbu58s_oxnWJkIabKa1zUOWhr76balM98rfsUdgg24AYAZ6N3vScM61xLE3g"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 bg-[#FDECEF] text-[#A30F2D] text-[11px] font-semibold rounded-[6px]">Documentation</span>
+<span class="font-metadata text-metadata text-secondary">12 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-3 group-hover:text-primary transition-colors">Docs-as-Code Workflows</h3>
+<p class="font-body-base text-body-base text-secondary mb-6 flex-grow">Integrating technical writing into the developer workflow for better maintainability.</p>
+<a class="inline-flex items-center gap-2 font-metadata text-primary font-bold group/link" href="#">
+                            Read Article
+                            <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Contact Prompt -->
+<section class="max-w-container-max-width mx-auto px-gutter mt-section-padding-lg">
+<div class="bg-primary-container p-12 rounded-xl text-center">
+<h2 class="font-section-title text-on-primary-container mb-4">Want more insights?</h2>
+<p class="font-body-large text-on-primary-container opacity-90 mb-8 max-w-2xl mx-auto">Subscribe to my monthly digest on software engineering, product management, and technical leadership.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+<input class="flex-grow px-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-on-primary-container outline-none" placeholder="email@example.com" type="email"/>
+<button class="px-8 py-3 bg-on-primary-container text-primary-container font-bold rounded-lg hover:opacity-90 transition-opacity">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-sm bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps font-bold text-on-surface">AMI</span>
+<p class="font-metadata text-metadata text-secondary">© Benedicta Davour. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">Upwork</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">Resume</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and simple effects
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

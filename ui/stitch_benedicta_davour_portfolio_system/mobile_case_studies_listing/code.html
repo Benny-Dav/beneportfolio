@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies | Benedicta Davour</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3b4",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-container-highest": "#d9e3f4",
+                    "surface-bright": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#e6bdbc",
+                    "surface-container": "#e5eeff",
+                    "tertiary-container": "#ce3448",
+                    "on-primary-fixed": "#40000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#121c28",
+                    "surface-tint": "#bf0030",
+                    "on-surface": "#121c28",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9ff",
+                    "outline": "#916f6e",
+                    "on-secondary-container": "#656464",
+                    "primary-fixed": "#ffdad9",
+                    "surface-variant": "#d9e3f4",
+                    "surface-container-high": "#dfe9fa",
+                    "secondary": "#5f5e5e",
+                    "tertiary-fixed": "#ffdada",
+                    "primary-container": "#dc143c",
+                    "on-tertiary-fixed-variant": "#920024",
+                    "surface-dim": "#d1dbec",
+                    "on-secondary-fixed-variant": "#474646",
+                    "on-primary-container": "#fff1f0",
+                    "surface": "#f8f9ff",
+                    "on-tertiary-fixed": "#40000b",
+                    "secondary-container": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#eef4ff",
+                    "inverse-primary": "#ffb3b3",
+                    "on-primary-fixed-variant": "#920022",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "inverse-surface": "#27313e",
+                    "tertiary": "#ab1832",
+                    "on-tertiary-container": "#fff1f1",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "primary": "#b1002c",
+                    "on-surface-variant": "#5c3f3f",
+                    "primary-fixed-dim": "#ffb3b3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max-width": "1200px",
+                    "section-padding-lg": "120px",
+                    "nav-height-mobile": "64px",
+                    "section-padding-sm": "64px",
+                    "nav-height-desktop": "72px"
+            },
+            "fontFamily": {
+                    "display-hero": ["Inter"],
+                    "body-large": ["Inter"],
+                    "body-base": ["Inter"],
+                    "display-hero-mobile": ["Inter"],
+                    "section-title-mobile": ["Inter"],
+                    "section-title": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "metadata": ["Inter"]
+            },
+            "fontSize": {
+                    "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .active-filter {
+            background-color: #DC143C;
+            color: white;
+            border-color: #DC143C;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-[64px] md:h-[72px] bg-surface border-b border-outline-variant z-50">
+<div class="flex justify-between items-center px-gutter max-w-container-max-width mx-auto w-full h-full">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">ami</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-body-base text-body-base text-secondary hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-base text-body-base text-primary font-bold" href="#">Case Studies</a>
+<a class="font-body-base text-body-base text-secondary hover:text-primary transition-colors duration-200" href="#">Experience</a>
+<a class="font-body-base text-body-base text-secondary hover:text-primary transition-colors duration-200" href="#">Writing</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-metadata text-metadata font-bold hover:bg-[#A30F2D] transition-colors">
+                Contact
+            </button>
+</div>
+</header>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-0 z-[60] transform -translate-x-full transition-transform duration-300 md:hidden" id="nav-drawer">
+<div class="absolute inset-0 bg-black/50" id="drawer-overlay"></div>
+<div class="relative w-4/5 h-full bg-surface p-8 flex flex-col gap-6 shadow-xl">
+<div class="flex justify-between items-center mb-4">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">ami</span>
+<button id="close-drawer">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-primary font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span> Case Studies
+            </a>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span> Outcomes
+            </a>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span> Experience
+            </a>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span> Skills
+            </a>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="edit">edit</span> Writing
+            </a>
+<a class="flex items-center gap-4 font-section-title-mobile text-section-title-mobile text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span> Contact
+            </a>
+</div>
+</div>
+<!-- Main Content -->
+<main class="pt-[nav-height-mobile] md:pt-[nav-height-desktop] pb-section-padding-sm">
+<!-- Header Section -->
+<section class="px-gutter py-12 bg-white border-b border-outline-variant">
+<div class="max-w-container-max-width mx-auto">
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:text-display-hero mb-4 text-on-surface">Case Studies</h1>
+<p class="font-body-large text-body-large text-secondary max-w-2xl">
+                    A rigorous archive of product challenges, engineered solutions, and measurable business outcomes. Focusing on technical precision and frontend excellence.
+                </p>
+</div>
+</section>
+<!-- Filter Chips -->
+<section class="sticky top-[64px] md:top-[72px] z-40 bg-white/80 backdrop-blur-md border-b border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter py-4 overflow-x-auto hide-scrollbar flex gap-3">
+<button class="active-filter px-5 py-2 border border-outline rounded-full font-metadata text-metadata whitespace-nowrap transition-all">All</button>
+<button class="bg-white px-5 py-2 border border-outline text-secondary hover:border-primary hover:text-primary rounded-full font-metadata text-metadata whitespace-nowrap transition-all">AI Tools</button>
+<button class="bg-white px-5 py-2 border border-outline text-secondary hover:border-primary hover:text-primary rounded-full font-metadata text-metadata whitespace-nowrap transition-all">Booking</button>
+<button class="bg-white px-5 py-2 border border-outline text-secondary hover:border-primary hover:text-primary rounded-full font-metadata text-metadata whitespace-nowrap transition-all">Ecommerce</button>
+<button class="bg-white px-5 py-2 border border-outline text-secondary hover:border-primary hover:text-primary rounded-full font-metadata text-metadata whitespace-nowrap transition-all">Dashboards</button>
+<button class="bg-white px-5 py-2 border border-outline text-secondary hover:border-primary hover:text-primary rounded-full font-metadata text-metadata whitespace-nowrap transition-all">Web Apps</button>
+</div>
+</section>
+<!-- Case Study List -->
+<section class="px-gutter py-8">
+<div class="max-w-container-max-width mx-auto flex flex-col gap-8 md:gap-12">
+<!-- Case Study Card 1 -->
+<article class="bg-white rounded-lg border border-outline-variant overflow-hidden flex flex-col md:flex-row transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:border-outline">
+<div class="w-full md:w-1/2 aspect-[4/3] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean and professional data dashboard interface displayed on a high-resolution tablet screen. The UI features complex data visualizations, including bar charts and heatmaps, in a sophisticated palette of deep reds and muted grays. The lighting is soft and corporate, emphasizing a professional and analytical atmosphere suitable for a high-level business environment. The background is a crisp, minimalist white office space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2QVvlWcd2Lbs7yZn9xk6A5cffyLqqnzClaqbOglay0NHBPwt-iIxAfcaH6_OurEcpGPgphuRrhHyUu7ZoJDNbo9aMFHSALf0_oJs0bywajNnL8Kxe-1p_Yhiijdks3QmZlhESIimsKsBl0IU1NZEER1HnQJ9LlRwvQYiD0K2u8cRSFYeFyfJEhvPt9QKab0lBAUJvuR6uEhvSD_2Kjp2f3byZKW73hB7_vgoxlsV7kLQ1oECyHlabKzQXlwj5b-LhLbO52O5Znls"/>
+</div>
+<div class="p-6 md:p-10 flex flex-col justify-between md:w-1/2">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">Fintech • B2B SaaS</span>
+<h2 class="font-section-title-mobile text-section-title-mobile md:text-section-title text-on-surface mb-4">AI-Driven Wealth Management Dashboard</h2>
+<div class="space-y-4 mb-6">
+<div>
+<p class="font-metadata text-metadata text-secondary uppercase tracking-wider mb-1">Problem</p>
+<p class="font-body-base text-body-base text-on-surface-variant">Fragmented data sources caused 20% latency in financial reporting for institutional clients.</p>
+</div>
+<div>
+<p class="font-metadata text-metadata text-secondary uppercase tracking-wider mb-1">Business Value</p>
+<p class="font-body-base text-body-base text-on-surface-variant font-semibold">Reduced report generation time by 65% and increased user retention by 30%.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">React</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">TypeScript</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">D3.js</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Python</span>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="flex-1 bg-primary text-on-primary text-center py-3 rounded-lg font-metadata text-metadata font-bold hover:bg-[#A30F2D] transition-colors" href="#">Read Case Study</a>
+<a class="flex-1 border border-outline text-on-surface text-center py-3 rounded-lg font-metadata text-metadata font-bold hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span> Live Demo
+                            </a>
+</div>
+</div>
+</article>
+<!-- Case Study Card 2 -->
+<article class="bg-white rounded-lg border border-outline-variant overflow-hidden flex flex-col md:flex-row transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:border-outline">
+<div class="w-full md:w-1/2 aspect-[4/3] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An elegant ecommerce mobile application interface showing high-end fashion products. The UI design is minimalist with a sharp focus on high-quality product photography and clean typography. The layout emphasizes whitespace and clear hierarchical structures, following a light-mode aesthetic with subtle red primary accents. The image capture is sharp and detailed, conveying a sense of technical excellence and premium brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVvS6qgRG9OCeD0zuur91k0JQqC6xHxoX_Ys1paTbG4JkxOfs8k178IfzCGQn454Lnom9T7rzsLnx5dSmuYTkf4ceSOUggitJx61mziNMNB1pbFDehQrt2J1gYVt8gUWL7myTwVHwENAOpZ2DSwA1Tdvg0iOt9prp5bK0xJmNyvC_kfJGQ1cwZUPOdp2IND3lp2GV_Vd01bOtuDtXuKzowJ_k-8PJ3BIT67HQO0F_eaBUMLZj-yaGpJspnNhF7j5xIXTwhr9N_CX8"/>
+</div>
+<div class="p-6 md:p-10 flex flex-col justify-between md:w-1/2">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">Ecommerce • Retail</span>
+<h2 class="font-section-title-mobile text-section-title-mobile md:text-section-title text-on-surface mb-4">Scalable Headless Commerce Engine</h2>
+<div class="space-y-4 mb-6">
+<div>
+<p class="font-metadata text-metadata text-secondary uppercase tracking-wider mb-1">Problem</p>
+<p class="font-body-base text-body-base text-on-surface-variant">Monolithic legacy stack prevented rapid expansion into new international markets.</p>
+</div>
+<div>
+<p class="font-metadata text-metadata text-secondary uppercase tracking-wider mb-1">Business Value</p>
+<p class="font-body-base text-body-base text-on-surface-variant font-semibold">Enabled 5-day market launches and improved Lighthouse performance scores by 45 points.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Next.js</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">GraphQL</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Vercel</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Tailwind</span>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="flex-1 bg-primary text-on-primary text-center py-3 rounded-lg font-metadata text-metadata font-bold hover:bg-[#A30F2D] transition-colors" href="#">Read Case Study</a>
+<a class="flex-1 border border-outline text-on-surface text-center py-3 rounded-lg font-metadata text-metadata font-bold hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span> Live Demo
+                            </a>
+</div>
+</div>
+</article>
+<!-- Case Study Card 3 -->
+<article class="bg-white rounded-lg border border-outline-variant overflow-hidden flex flex-col md:flex-row transition-all hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:border-outline">
+<div class="w-full md:w-1/2 aspect-[4/3] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern code-focused interface showing a complex project management system. The screen highlights structured task lists and real-time collaboration indicators. The visual style is rooted in professional technical precision, utilizing a neutral gray background with vibrant red highlights to indicate active tasks. The lighting is crisp and uniform, representing a high-density, efficient information environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0f6l7pAxDDW85lVg5utabpVsAWmLPFTA4MkHApM5ttwt2Wr7bVVbek944EzeRYzR8m2fEwqaaWZtloq7gwJojO5KmTt99_HBX6O7Y_8gWW5T9_LQwejqIqQitzcjhwjVY7rpJSVnxM4UWxYfiUeoyvFaUWzcMmPPoYFjHih-xNFQhqmDn0fiMWSFTGIMS3BgYRdevz4juHy7dAYE1CoiKU5V3Ewkq455F0y_1HqXEeFpGz1aaGGmw0ZMn2-14wT9ZbJ7tJn_HWo"/>
+</div>
+<div class="p-6 md:p-10 flex flex-col justify-between md:w-1/2">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">Web Apps • Productivity</span>
+<h2 class="font-section-title-mobile text-section-title-mobile md:text-section-title text-on-surface mb-4">Real-time Engineering Workspace</h2>
+<div class="space-y-4 mb-6">
+<div>
+<p class="font-metadata text-metadata text-secondary uppercase tracking-wider mb-1">Problem</p>
+<p class="font-body-base text-body-base text-on-surface-variant">Sync conflicts in collaborative code reviews cost engineering teams 12 hours per week.</p>
+</div>
+<div>
+<p class="font-metadata text-metadata text-secondary uppercase tracking-wider mb-1">Business Value</p>
+<p class="font-body-base text-body-base text-on-surface-variant font-semibold">Reduced conflict resolution time by 90% using CRDT synchronization logic.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">WebSockets</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Rust</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Node.js</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-[6px] font-metadata text-metadata">Redis</span>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="flex-1 bg-primary text-on-primary text-center py-3 rounded-lg font-metadata text-metadata font-bold hover:bg-[#A30F2D] transition-colors" href="#">Read Case Study</a>
+<a class="flex-1 border border-outline text-on-surface text-center py-3 rounded-lg font-metadata text-metadata font-bold hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span> Live Demo
+                            </a>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-section-padding-sm">
+<div class="max-w-container-max-width mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-8 w-full">
+<div class="text-center md:text-left">
+<span class="font-label-caps text-label-caps font-bold text-on-surface block mb-2 uppercase tracking-widest">Benedicta Davour</span>
+<p class="font-metadata text-metadata text-secondary">© Benedicta Davour. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all duration-200" href="#">LinkedIn</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all duration-200" href="#">GitHub</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all duration-200" href="#">Upwork</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all duration-200" href="#">Resume</a>
+</div>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeDrawer = document.getElementById('close-drawer');
+        const navDrawer = document.getElementById('nav-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        const toggleDrawer = () => {
+            navDrawer.classList.toggle('-translate-x-full');
+        };
+
+        menuToggle.addEventListener('click', toggleDrawer);
+        closeDrawer.addEventListener('click', toggleDrawer);
+        drawerOverlay.addEventListener('click', toggleDrawer);
+
+        // Filter chip logic
+        const filterButtons = document.querySelectorAll('button.rounded-full');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('active-filter');
+                    b.classList.add('bg-white', 'text-secondary');
+                });
+                btn.classList.add('active-filter');
+                btn.classList.remove('bg-white', 'text-secondary');
+            });
+        });
+    </script>
+</body></html>

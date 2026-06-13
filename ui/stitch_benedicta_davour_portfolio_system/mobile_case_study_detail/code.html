@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study: One-Click Portfolio Website Builder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+            color: #121c28;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .callout-box {
+            position: relative;
+            overflow: hidden;
+        }
+        .callout-box::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #b1002c;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3b4",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-container-highest": "#d9e3f4",
+                      "surface-bright": "#f8f9ff",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e6bdbc",
+                      "surface-container": "#e5eeff",
+                      "tertiary-container": "#ce3448",
+                      "on-primary-fixed": "#40000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#121c28",
+                      "surface-tint": "#bf0030",
+                      "on-surface": "#121c28",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-error": "#ffffff",
+                      "background": "#f8f9ff",
+                      "outline": "#916f6e",
+                      "on-secondary-container": "#656464",
+                      "primary-fixed": "#ffdad9",
+                      "surface-variant": "#d9e3f4",
+                      "surface-container-high": "#dfe9fa",
+                      "secondary": "#5f5e5e",
+                      "tertiary-fixed": "#ffdada",
+                      "primary-container": "#dc143c",
+                      "on-tertiary-fixed-variant": "#920024",
+                      "surface-dim": "#d1dbec",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary-container": "#fff1f0",
+                      "surface": "#f8f9ff",
+                      "on-tertiary-fixed": "#40000b",
+                      "secondary-container": "#e5e2e1",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#eef4ff",
+                      "inverse-primary": "#ffb3b3",
+                      "on-primary-fixed-variant": "#920022",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-surface": "#27313e",
+                      "tertiary": "#ab1832",
+                      "on-tertiary-container": "#fff1f1",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "primary": "#b1002c",
+                      "on-surface-variant": "#5c3f3f",
+                      "primary-fixed-dim": "#ffb3b3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max-width": "1200px",
+                      "section-padding-lg": "120px",
+                      "nav-height-mobile": "64px",
+                      "section-padding-sm": "64px",
+                      "nav-height-desktop": "72px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Inter"],
+                      "body-large": ["Inter"],
+                      "body-base": ["Inter"],
+                      "display-hero-mobile": ["Inter"],
+                      "section-title-mobile": ["Inter"],
+                      "section-title": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "metadata": ["Inter"]
+              },
+              "fontSize": {
+                      "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full h-[64px] bg-surface/90 backdrop-blur-md z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center px-gutter h-full max-w-container-max-width mx-auto">
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-metadata text-metadata">Case Studies</span>
+</a>
+<div class="font-display-hero-mobile text-[20px] font-bold text-on-surface">ami</div>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</header>
+<main class="pt-[64px]">
+<!-- Hero Section -->
+<section class="px-gutter pt-12 pb-8 max-w-container-max-width mx-auto">
+<div class="flex flex-col gap-4 mb-8">
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full w-fit">
+<span class="font-label-caps text-label-caps">AI PRODUCT DESIGN</span>
+</div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile text-on-surface">One-Click Portfolio Builder</h1>
+<p class="font-body-large text-body-large text-secondary leading-relaxed">
+                    Revolutionizing how creators present their work through an AI-assisted workflow that transforms raw data into high-converting portfolios in seconds.
+                </p>
+</div>
+<!-- Metadata Bento -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-secondary opacity-70">ROLE</span>
+<span class="font-metadata text-metadata text-on-surface font-bold">Lead Designer &amp; FE</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-secondary opacity-70">TYPE</span>
+<span class="font-metadata text-metadata text-on-surface font-bold">Product Strategy</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-secondary opacity-70">STACK</span>
+<span class="font-metadata text-metadata text-on-surface font-bold">Next.js, OpenAI, Tail</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-secondary opacity-70">STATUS</span>
+<span class="font-metadata text-metadata text-on-surface font-bold">Shipped V2.0</span>
+</div>
+</div>
+</section>
+<!-- Hero Image -->
+<section class="px-gutter pb-12 max-w-container-max-width mx-auto">
+<div class="relative rounded-2xl overflow-hidden shadow-xl border border-outline-variant bg-surface-container-highest">
+<img class="w-full aspect-[4/3] md:aspect-[21/9] object-cover" data-alt="A high-fidelity mockup of a clean, minimalist portfolio website builder interface displayed on a sleek laptop screen. The design features a crisp white canvas with elegant typography in black and vibrant red accents. Soft, natural light streams from the side, creating a professional and modern office atmosphere. The composition is sharp and centered, emphasizing the product's sophisticated aesthetic and technical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_INXGOESrv4-WvHKsXmEtjudmPca_HQmQJtvglusIYwAtnIDobIrOYDnU5Dh-oLioVMvwhYOOARnid7ePF0kqPJIn8OhaPXFh21ggufrMV17gdb3yeRzLlu8gpkFiOOVte97t1NbA08eqfGXsM-P3AcgYYdj3t-Ctk3juHo0AaF3lqQTShYqvXrW5BbkivQXucgmDv9N1TxA7TE5nZHMefWNnPSORuVW10Zhj9ozO1WzkyPO4nvSzaaifWpGQqoaGciezge-qp7U"/>
+</div>
+</section>
+<!-- Case Study Content -->
+<article class="px-gutter pb-section-padding-sm max-w-[800px] mx-auto space-y-16">
+<!-- Business Problem -->
+<section>
+<h2 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-6">The Business Problem</h2>
+<div class="font-body-base text-body-base text-secondary space-y-4">
+<p>
+                        Creators often spend more time building their portfolios than actual client work. Traditional builders were either too complex (Webflow) or too rigid (Squarespace). 
+                    </p>
+<div class="callout-box p-6 bg-surface-container rounded-lg italic">
+                        "Market research showed a 60% drop-off rate during the initial template setup phase for most users."
+                    </div>
+</div>
+</section>
+<!-- Users -->
+<section>
+<h2 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-6">The Users</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-6 bg-white border border-outline-variant rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">brush</span>
+<h4 class="font-metadata text-metadata font-bold mb-2">Visual Artists</h4>
+<p class="font-body-base text-body-base text-secondary">Need high-impact visual grids with zero technical friction.</p>
+</div>
+<div class="p-6 bg-white border border-outline-variant rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary mb-3">code</span>
+<h4 class="font-metadata text-metadata font-bold mb-2">Technical Leads</h4>
+<p class="font-body-base text-body-base text-secondary">Looking for semantic code exports and high-performance SEO.</p>
+</div>
+</div>
+</section>
+<!-- Technical Decisions -->
+<section>
+<h2 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-6">Technical Decisions</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="bg-primary text-white p-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<h4 class="font-metadata text-metadata font-bold mb-1">Headless CMS Engine</h4>
+<p class="font-body-base text-body-base text-secondary">Decoupled content from presentation layer to allow for instant theme switching without data loss.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-primary text-white p-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h4 class="font-metadata text-metadata font-bold mb-1">AI-Driven Copywriting</h4>
+<p class="font-body-base text-body-base text-secondary">Integration with GPT-4 to generate project descriptions based on raw GitHub or Behance metadata.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Metrics -->
+<section class="bg-on-surface text-surface p-8 rounded-2xl">
+<h2 class="font-section-title-mobile text-section-title-mobile mb-8 text-white">Impact</h2>
+<div class="grid grid-cols-1 gap-8">
+<div class="border-l-2 border-primary pl-6">
+<div class="text-[42px] font-bold text-white mb-1">85%</div>
+<div class="font-metadata text-metadata opacity-80">Reduction in setup time</div>
+</div>
+<div class="border-l-2 border-primary pl-6">
+<div class="text-[42px] font-bold text-white mb-1">12k+</div>
+<div class="font-metadata text-metadata opacity-80">Portfolios deployed in 3 months</div>
+</div>
+</div>
+</section>
+<!-- Improvement Next -->
+<section>
+<h2 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-6">Next Steps</h2>
+<p class="font-body-base text-body-base text-secondary mb-6">
+                    Looking ahead, we are focusing on "Custom Component Injection" and advanced analytics for creators to track conversion rates on their portfolio pages.
+                </p>
+<div class="p-4 bg-surface-container-highest rounded-lg border border-outline flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">info</span>
+<span class="font-metadata text-metadata text-secondary">Planned for Q3 Release: Real-time Collaboration.</span>
+</div>
+</section>
+<!-- CTA -->
+<section class="text-center pt-8 border-t border-outline-variant">
+<h3 class="font-section-title-mobile text-section-title-mobile mb-4">Like this work?</h3>
+<p class="font-body-base text-body-base text-secondary mb-8">Let's discuss how we can build something similar for your product ecosystem.</p>
+<div class="flex flex-col gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-metadata text-metadata font-bold hover:bg-[#A30F2D] transition-colors shadow-lg">
+                        Get In Touch
+                    </button>
+<button class="bg-white border border-outline-variant text-on-surface px-8 py-4 rounded-lg font-metadata text-metadata font-bold hover:bg-surface-container transition-colors">
+                        Next Case Study
+                    </button>
+</div>
+</section>
+</article>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-sm bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter flex flex-col items-center gap-8 text-center">
+<div class="font-label-caps text-label-caps font-bold text-on-surface">ami</div>
+<div class="flex gap-6">
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-colors" href="#">Upwork</a>
+</div>
+<p class="font-metadata text-metadata text-secondary opacity-70">© Benedicta Davour. All rights reserved.</p>
+</div>
+</footer>
+<!-- Mobile Scroll Back to Top FAB (Contextual) -->
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-xl transition-transform scale-0 opacity-0 z-40" id="fab">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<script>
+        // Micro-interactions
+        const fab = document.getElementById('fab');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                fab.classList.remove('scale-0', 'opacity-0');
+                fab.classList.add('scale-100', 'opacity-100');
+            } else {
+                fab.classList.add('scale-0', 'opacity-0');
+                fab.classList.remove('scale-100', 'opacity-100');
+            }
+        });
+
+        fab.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Simple Intersection Observer for Fade-In Effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

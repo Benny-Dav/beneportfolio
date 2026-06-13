@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Writing | Benedicta Davour</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3b4",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-container-highest": "#d9e3f4",
+                    "surface-bright": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#e6bdbc",
+                    "surface-container": "#e5eeff",
+                    "tertiary-container": "#ce3448",
+                    "on-primary-fixed": "#40000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#121c28",
+                    "surface-tint": "#bf0030",
+                    "on-surface": "#121c28",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9ff",
+                    "outline": "#916f6e",
+                    "on-secondary-container": "#656464",
+                    "primary-fixed": "#ffdad9",
+                    "surface-variant": "#d9e3f4",
+                    "surface-container-high": "#dfe9fa",
+                    "secondary": "#5f5e5e",
+                    "tertiary-fixed": "#ffdada",
+                    "primary-container": "#dc143c",
+                    "on-tertiary-fixed-variant": "#920024",
+                    "surface-dim": "#d1dbec",
+                    "on-secondary-fixed-variant": "#474646",
+                    "on-primary-container": "#fff1f0",
+                    "surface": "#f8f9ff",
+                    "on-tertiary-fixed": "#40000b",
+                    "secondary-container": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#eef4ff",
+                    "inverse-primary": "#ffb3b3",
+                    "on-primary-fixed-variant": "#920022",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "inverse-surface": "#27313e",
+                    "tertiary": "#ab1832",
+                    "on-tertiary-container": "#fff1f1",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "primary": "#b1002c",
+                    "on-surface-variant": "#5c3f3f",
+                    "primary-fixed-dim": "#ffb3b3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max-width": "1200px",
+                    "section-padding-lg": "120px",
+                    "nav-height-mobile": "64px",
+                    "section-padding-sm": "64px",
+                    "nav-height-desktop": "72px"
+            },
+            "fontFamily": {
+                    "display-hero": ["Inter"],
+                    "body-large": ["Inter"],
+                    "body-base": ["Inter"],
+                    "display-hero-mobile": ["Inter"],
+                    "section-title-mobile": ["Inter"],
+                    "section-title": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "metadata": ["Inter"]
+            },
+            "fontSize": {
+                    "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-filter {
+            background-color: #DC143C !important;
+            color: #FFFFFF !important;
+            border-color: #DC143C !important;
+        }
+        body {
+            background-color: #f8f9ff;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-base text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-[64px] md:h-[72px] bg-surface border-b border-outline-variant z-50">
+<div class="flex justify-between items-center px-gutter max-w-container-max-width mx-auto w-full h-full">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">ami</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-metadata text-metadata" href="#">Home</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-metadata text-metadata" href="#">Outcomes</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-metadata text-metadata" href="#">Case Studies</a>
+<a class="text-primary font-bold font-metadata text-metadata" href="#">Writing</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-metadata text-metadata hover:opacity-90 transition-opacity" href="#">Contact</a>
+</nav>
+<button class="md:hidden text-primary font-metadata text-metadata">Contact</button>
+</div>
+</header>
+<!-- NavigationDrawer (Mobile Only) -->
+<div class="fixed inset-0 z-[60] w-full h-full bg-surface translate-x-full transition-transform duration-300 md:hidden" id="drawer">
+<div class="flex flex-col p-8 gap-6">
+<div class="flex justify-between items-center mb-8">
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">ami</span>
+<button class="text-on-surface" id="close-drawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<a class="flex items-center gap-4 text-on-surface font-section-title-mobile text-section-title-mobile hover:bg-surface-container-low transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 text-on-surface font-section-title-mobile text-section-title-mobile hover:bg-surface-container-low transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">trending_up</span> Outcomes
+            </a>
+<a class="flex items-center gap-4 text-on-surface font-section-title-mobile text-section-title-mobile hover:bg-surface-container-low transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">work</span> Case Studies
+            </a>
+<a class="flex items-center gap-4 text-primary font-bold font-section-title-mobile text-section-title-mobile hover:bg-surface-container-low transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">edit</span> Writing
+            </a>
+<a class="flex items-center gap-4 text-on-surface font-section-title-mobile text-section-title-mobile hover:bg-surface-container-low transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+</div>
+</div>
+<main class="pt-[64px] md:pt-[72px]">
+<!-- Hero Section -->
+<section class="px-gutter py-12 md:py-24 max-w-container-max-width mx-auto">
+<div class="max-w-3xl">
+<h2 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-on-surface mb-6">Technical Writing</h2>
+<p class="font-body-large text-body-large text-secondary leading-relaxed">
+                    Bridging the gap between code and business logic. Exploring product strategy, system architecture, and modern engineering practices.
+                </p>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="px-gutter mb-12 max-w-container-max-width mx-auto">
+<div class="flex flex-wrap gap-3">
+<button class="filter-chip active-filter px-6 py-2 rounded-full border border-outline-variant font-metadata text-metadata transition-all">All Articles</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant font-metadata text-metadata text-secondary bg-surface hover:bg-surface-container transition-all">Development</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant font-metadata text-metadata text-secondary bg-surface hover:bg-surface-container transition-all">Strategy</button>
+<button class="filter-chip px-6 py-2 rounded-full border border-outline-variant font-metadata text-metadata text-secondary bg-surface hover:bg-surface-container transition-all">AI</button>
+</div>
+</section>
+<!-- Articles Grid -->
+<section class="px-gutter pb-section-padding-sm md:pb-section-padding-lg max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Article 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 flex flex-col hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-[#FDECEF] text-primary px-3 py-1 rounded-[6px] font-label-caps text-label-caps uppercase">AI</span>
+<span class="text-secondary font-metadata text-metadata">6 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-4 leading-tight">Building an AI CV-to-Portfolio Generator</h3>
+<p class="font-body-base text-body-base text-secondary mb-8 flex-grow">
+                        An exploration of RAG pipelines and LLM orchestration to automate professional storytelling for engineers.
+                    </p>
+<a class="flex items-center gap-2 text-primary font-metadata text-metadata font-bold hover:underline" href="#">
+                        Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Article 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 flex flex-col hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-[#FDECEF] text-primary px-3 py-1 rounded-[6px] font-label-caps text-label-caps uppercase">Development</span>
+<span class="text-secondary font-metadata text-metadata">12 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-4 leading-tight">Designing Booking Workflows in React</h3>
+<p class="font-body-base text-body-base text-secondary mb-8 flex-grow">
+                        Architecting state machines for complex multi-step user journeys while maintaining zero latency and data integrity.
+                    </p>
+<a class="flex items-center gap-2 text-primary font-metadata text-metadata font-bold hover:underline" href="#">
+                        Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Article 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 flex flex-col hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-[#FDECEF] text-primary px-3 py-1 rounded-[6px] font-label-caps text-label-caps uppercase">Strategy</span>
+<span class="text-secondary font-metadata text-metadata">8 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-4 leading-tight">The Unit Economics of Technical Debt</h3>
+<p class="font-body-base text-body-base text-secondary mb-8 flex-grow">
+                        How to quantify engineering velocity loss and pitch infrastructure upgrades to non-technical stakeholders.
+                    </p>
+<a class="flex items-center gap-2 text-primary font-metadata text-metadata font-bold hover:underline" href="#">
+                        Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Article 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 flex flex-col hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-[#FDECEF] text-primary px-3 py-1 rounded-[6px] font-label-caps text-label-caps uppercase">Development</span>
+<span class="text-secondary font-metadata text-metadata">5 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-4 leading-tight">Micro-frontend Governance Models</h3>
+<p class="font-body-base text-body-base text-secondary mb-8 flex-grow">
+                        Evaluating the trade-offs between Module Federation and build-time integration in enterprise environments.
+                    </p>
+<a class="flex items-center gap-2 text-primary font-metadata text-metadata font-bold hover:underline" href="#">
+                        Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Article 5 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 flex flex-col hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-[#FDECEF] text-primary px-3 py-1 rounded-[6px] font-label-caps text-label-caps uppercase">AI</span>
+<span class="text-secondary font-metadata text-metadata">10 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-4 leading-tight">Prompt Engineering as Middleware</h3>
+<p class="font-body-base text-body-base text-secondary mb-8 flex-grow">
+                        Why the next generation of full-stack engineers will treat LLM prompts like dynamic API endpoints.
+                    </p>
+<a class="flex items-center gap-2 text-primary font-metadata text-metadata font-bold hover:underline" href="#">
+                        Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+<!-- Article 6 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-8 flex flex-col hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-[#FDECEF] text-primary px-3 py-1 rounded-[6px] font-label-caps text-label-caps uppercase">Strategy</span>
+<span class="text-secondary font-metadata text-metadata">15 min read</span>
+</div>
+<h3 class="font-section-title-mobile text-section-title-mobile text-on-surface mb-4 leading-tight">Product-Led Growth for API Services</h3>
+<p class="font-body-base text-body-base text-secondary mb-8 flex-grow">
+                        How documentation and developer experience (DX) directly correlate to bottom-line ARR in SaaS.
+                    </p>
+<a class="flex items-center gap-2 text-primary font-metadata text-metadata font-bold hover:underline" href="#">
+                        Read Article <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container py-section-padding-sm md:py-section-padding-lg">
+<div class="px-gutter max-w-container-max-width mx-auto text-center">
+<h2 class="font-section-title-mobile text-section-title-mobile md:font-section-title md:text-section-title text-on-surface mb-6">Have a project in mind?</h2>
+<p class="font-body-large text-body-large text-secondary max-w-2xl mx-auto mb-10">
+                    I help companies build scalable products through engineering excellence and strategic product thinking.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-metadata text-metadata font-bold hover:opacity-90 transition-opacity">Work with me</button>
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant px-10 py-4 rounded-lg font-metadata text-metadata font-bold hover:bg-surface transition-colors">View Resume</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-16 md:py-24 border-t border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-label-caps text-label-caps font-bold text-on-surface tracking-widest">AMI</span>
+<p class="font-metadata text-metadata text-secondary text-center md:text-left">© Benedicta Davour. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-secondary font-metadata text-metadata hover:text-primary transition-colors underline-offset-4 hover:underline" href="#">LinkedIn</a>
+<a class="text-secondary font-metadata text-metadata hover:text-primary transition-colors underline-offset-4 hover:underline" href="#">GitHub</a>
+<a class="text-secondary font-metadata text-metadata hover:text-primary transition-colors underline-offset-4 hover:underline" href="#">Upwork</a>
+<a class="text-secondary font-metadata text-metadata hover:text-primary transition-colors underline-offset-4 hover:underline" href="#">Resume</a>
+</div>
+</div>
+</footer>
+<script>
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeDrawer = document.getElementById('close-drawer');
+        const drawer = document.getElementById('drawer');
+
+        menuToggle.addEventListener('click', () => {
+            drawer.classList.remove('translate-x-full');
+        });
+
+        closeDrawer.addEventListener('click', () => {
+            drawer.classList.add('translate-x-full');
+        });
+
+        // Filter Logic
+        const filterChips = document.querySelectorAll('.filter-chip');
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                filterChips.forEach(c => c.classList.remove('active-filter', 'text-on-primary', 'bg-primary'));
+                filterChips.forEach(c => {
+                    if (!c.classList.contains('active-filter')) {
+                        c.classList.add('text-secondary', 'bg-surface');
+                    }
+                });
+                chip.classList.add('active-filter');
+                chip.classList.remove('text-secondary', 'bg-surface');
+            });
+        });
+    </script>
+</body></html>

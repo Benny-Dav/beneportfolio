@@ -1,9 +1,9 @@
 import icon1 from "../assets/images/html5.png" ;
 import icon2 from "../assets/images/css3.png" ;
-import icon3 from "../assets/images/tailwind.svg" ;
-import icon4 from "../assets/images/react.png" ;
+import icon3 from "../assets/images/tailwind.png" ;
+import icon4 from "../assets/images/reactjs.png" ;
 import icon5 from "../assets/images/nextjs.png" ;
-import icon6 from "../assets/images/js.png" ;
+import icon6 from "../assets/images/javascript.png" ;
 import openaiIcon from "../assets/images/openai.png" ;
 
 const T = {

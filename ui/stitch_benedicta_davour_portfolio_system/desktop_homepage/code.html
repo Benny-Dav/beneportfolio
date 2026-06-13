@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benedicta Davour | Product Consultant &amp; Frontend Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+            color: #121c28;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            border-color: #D1D5DB;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3b4",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-container-highest": "#d9e3f4",
+                      "surface-bright": "#f8f9ff",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e6bdbc",
+                      "surface-container": "#e5eeff",
+                      "tertiary-container": "#ce3448",
+                      "on-primary-fixed": "#40000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#121c28",
+                      "surface-tint": "#bf0030",
+                      "on-surface": "#121c28",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-error": "#ffffff",
+                      "background": "#f8f9ff",
+                      "outline": "#916f6e",
+                      "on-secondary-container": "#656464",
+                      "primary-fixed": "#ffdad9",
+                      "surface-variant": "#d9e3f4",
+                      "surface-container-high": "#dfe9fa",
+                      "secondary": "#5f5e5e",
+                      "tertiary-fixed": "#ffdada",
+                      "primary-container": "#dc143c",
+                      "on-tertiary-fixed-variant": "#920024",
+                      "surface-dim": "#d1dbec",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary-container": "#fff1f0",
+                      "surface": "#f8f9ff",
+                      "on-tertiary-fixed": "#40000b",
+                      "secondary-container": "#e5e2e1",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#eef4ff",
+                      "inverse-primary": "#ffb3b3",
+                      "on-primary-fixed-variant": "#920022",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-surface": "#27313e",
+                      "tertiary": "#ab1832",
+                      "on-tertiary-container": "#fff1f1",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "primary": "#b1002c",
+                      "on-surface-variant": "#5c3f3f",
+                      "primary-fixed-dim": "#ffb3b3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max-width": "1200px",
+                      "section-padding-lg": "120px",
+                      "nav-height-mobile": "64px",
+                      "section-padding-sm": "64px",
+                      "nav-height-desktop": "72px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Inter"],
+                      "body-large": ["Inter"],
+                      "body-base": ["Inter"],
+                      "display-hero-mobile": ["Inter"],
+                      "section-title-mobile": ["Inter"],
+                      "section-title": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "metadata": ["Inter"]
+              },
+              "fontSize": {
+                      "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-[nav-height-mobile] md:h-[nav-height-desktop] bg-surface z-50 border-b border-outline-variant">
+<nav class="max-w-container-max-width mx-auto px-gutter h-full flex justify-between items-center w-full">
+<div class="flex items-center">
+<span class="font-display-hero-mobile text-display-hero-mobile font-extrabold text-on-surface">ami</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-bold font-body-base text-body-base" href="#home">Home</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#outcomes">Outcomes</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#work">Case Studies</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#experience">Experience</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#skills">Skills</a>
+</div>
+<div>
+<a class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-bold hover:bg-tertiary-container transition-all text-body-base" href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main class="pt-[nav-height-desktop]">
+<!-- Hero Section -->
+<section class="max-w-container-max-width mx-auto px-gutter py-section-padding-sm md:py-section-padding-lg" id="home">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-primary rounded-full font-label-caps text-label-caps">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        AVAILABLE FOR Q3 PROJECTS
+                    </div>
+<h1 class="font-display-hero text-display-hero text-on-surface">
+                        Bridging the gap between <span class="text-primary">Vision</span> and <span class="italic font-normal">Execution.</span>
+</h1>
+<p class="font-body-large text-body-large text-secondary max-w-xl">
+                        I specialize in building high-performance frontend architectures and consulting on product strategy for technical SaaS companies.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-bold text-body-large hover:bg-tertiary-container transition-all" href="#work">View Case Studies</a>
+<a class="bg-white border border-outline-variant text-on-surface px-8 py-4 rounded-lg font-bold text-body-large hover:border-outline transition-all" href="#contact">Let's Connect</a>
+</div>
+<div class="flex items-center gap-6 pt-8 grayscale opacity-60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-metadata text-metadata">Ex-Google</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<span class="font-metadata text-metadata">10+ Years Eng</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">insights</span>
+<span class="font-metadata text-metadata">Product Advisor</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary-fixed/30 blur-3xl rounded-full"></div>
+<div class="relative bg-white border border-outline-variant rounded-xl overflow-hidden shadow-2xl">
+<img alt="Professional Portfolio Display" class="w-full h-auto" data-alt="A highly polished close-up of a modern enterprise software dashboard displayed on a sleek high-resolution monitor. The interface features complex data visualizations, clean white UI cards, and deep ruby-red accents that match the corporate brand identity. Soft natural morning light hits the workspace, emphasizing a professional, high-performance engineering environment with a minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtpAjooviDuwskDFfCMuyyJ8nx6c7mbQyEQ9XByNayALdhYByg-MBmx6kKWAVyKlmsiG1U7-tRCSy8T8f0Gs7cRtntlVvQBqyILdns6W1cL3FpBVorlA3m9Wl-YsmmylsWSGjqieZbUNeiHtWfGSUb86raZdWH95Hb4FiNFNKBJS-gh9-roPrzorrksYIgLY7R6Wd6eitLPgK8Vxp_JjYbViTTdcCGKzTTKvkwBD9f6XVyQsTHq-96mUi8IGIgReW5c_hc-Nq9scM"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Proof Bar -->
+<section class="bg-surface-container-lowest border-y border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter py-12">
+<p class="text-center font-label-caps text-label-caps text-secondary mb-8">TRUSTED BY TEAMS AT</p>
+<div class="flex flex-wrap justify-between items-center gap-8 md:gap-12 opacity-50 grayscale">
+<span class="font-display-hero-mobile text-2xl font-bold">Stripe</span>
+<span class="font-display-hero-mobile text-2xl font-bold">Loom</span>
+<span class="font-display-hero-mobile text-2xl font-bold">Vercel</span>
+<span class="font-display-hero-mobile text-2xl font-bold">Notion</span>
+<span class="font-display-hero-mobile text-2xl font-bold">Figma</span>
+</div>
+</div>
+</section>
+<!-- Outcomes -->
+<section class="py-section-padding-lg bg-white" id="outcomes">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="mb-16">
+<h2 class="font-section-title text-section-title text-on-surface mb-4">Strategic Outcomes</h2>
+<p class="font-body-large text-body-large text-secondary max-w-2xl">Measurable impact delivered through a combination of engineering excellence and product thinking.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="p-8 bg-surface rounded-lg border border-outline-variant card-hover">
+<div class="text-primary mb-4"><span class="material-symbols-outlined text-4xl">speed</span></div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-2">40%</h3>
+<p class="font-body-base text-body-base text-secondary">Average reduction in LCP across client web applications.</p>
+</div>
+<div class="p-8 bg-surface rounded-lg border border-outline-variant card-hover">
+<div class="text-primary mb-4"><span class="material-symbols-outlined text-4xl">inventory_2</span></div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-2">15+</h3>
+<p class="font-body-base text-body-base text-secondary">Design systems built and scaled from scratch for Series A-C.</p>
+</div>
+<div class="p-8 bg-surface rounded-lg border border-outline-variant card-hover">
+<div class="text-primary mb-4"><span class="material-symbols-outlined text-4xl">groups</span></div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-2">2.5x</h3>
+<p class="font-body-base text-body-base text-secondary">Increase in developer velocity after architecture refactors.</p>
+</div>
+<div class="p-8 bg-surface rounded-lg border border-outline-variant card-hover">
+<div class="text-primary mb-4"><span class="material-symbols-outlined text-4xl">trending_up</span></div>
+<h3 class="font-section-title-mobile text-section-title-mobile mb-2">$4M</h3>
+<p class="font-body-base text-body-base text-secondary">Additional ARR unlocked through core UX optimization.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Case Studies -->
+<section class="py-section-padding-lg bg-background" id="work">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="mb-16 flex justify-between items-end">
+<div>
+<h2 class="font-section-title text-section-title text-on-surface mb-4">Case Studies</h2>
+<p class="font-body-large text-body-large text-secondary max-w-2xl">Deep dives into architecture, user experience, and business strategy.</p>
+</div>
+</div>
+<!-- Case Study 1 -->
+<div class="flex flex-col md:flex-row gap-16 items-center mb-32 group">
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden border border-outline-variant bg-white">
+<img alt="FinTech Dashboard Refactor" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A clean, minimalist software engineering environment featuring a split-screen layout. On one side, organized blocks of React code with a red-accented syntax theme are visible. On the other side, a responsive data visualization dashboard is being rendered. The scene is bright and airy, representing a sophisticated corporate technical workflow with a focus on precision and modern design standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm0qKfv5yDeN23QgmwirzvHbZIH4k_apF5L67DHigUXQKnx6JPqTUic4ZwZsyJik-kTWaENCX1_yNT2lHCuQY0DNr8n6TKK6hpCHmQGBoYOmuXjLdO55hlD2BiMdJQ9I-wMTLqgDETaIMrD-eQ1Z7CsSIQT7wdZNuROZDoyrDQmz3rP83YR2iMqhPi42lRAeMuugTuBpgntazwjLAh_i7SApWfWeLcpgwKvDXcPChGvV9Lth62r1E5pxPqRwiYpVlG4zNgHB0CYqo"/>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="flex gap-2">
+<span class="bg-primary-fixed text-primary px-3 py-1 rounded-md font-label-caps text-label-caps">FINTECH</span>
+<span class="bg-surface-container-highest text-secondary px-3 py-1 rounded-md font-label-caps text-label-caps">ARCHITECTURE</span>
+</div>
+<h3 class="font-section-title text-section-title text-on-surface">Global Payments Infrastructure</h3>
+<p class="font-body-large text-body-large text-secondary">
+                            Redesigned the core merchant dashboard for a leading payments provider, resulting in a 30% reduction in customer support tickets and a significant increase in user retention.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-[#FDECEF] text-[#A30F2D] rounded-md font-metadata text-metadata">React</span>
+<span class="px-3 py-1 bg-[#FDECEF] text-[#A30F2D] rounded-md font-metadata text-metadata">TypeScript</span>
+<span class="px-3 py-1 bg-[#FDECEF] text-[#A30F2D] rounded-md font-metadata text-metadata">D3.js</span>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold group" href="#">
+                            Read Full Study
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Case Study 2 -->
+<div class="flex flex-col md:flex-row-reverse gap-16 items-center group">
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden border border-outline-variant bg-white">
+<img alt="Design System Scaling" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="An artistic high-angle shot of a designer's desk containing a tablet showing a structured design system with atomic components. The desk is white and minimalist, surrounded by high-end tech accessories. The color palette is strictly professional, utilizing light grays and crisp whites with subtle red highlights on the screen interface. The lighting is diffused and professional, creating a clean, high-density information aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8AjslRCq15NS_WD0ywIKSDqBSW0eOT5G3mgOSr8uX7HCPonaZWF1js8gedcYYh8UVAw8rxvZ-zdVC31E7VAiuQnh5DYqpYoyqhzmfBZrEHdY_rM5MQlxYO0qJqMRpguAReRr3t4FH9NAKrgbpuEFOnX0c2wY9E0yNlAFoOwZwnwVOxmA7BRYaVVr-QNUz_FBIV_r_P3xtlkaUwzuSrK7t4n-0_6iL_JeIWqZHtKPNj3B0zwuk06MZbc7ooCcTSblBhTkCOdl06h0"/>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="flex gap-2">
+<span class="bg-primary-fixed text-primary px-3 py-1 rounded-md font-label-caps text-label-caps">SAAS</span>
+<span class="bg-surface-container-highest text-secondary px-3 py-1 rounded-md font-label-caps text-label-caps">DESIGN SYSTEMS</span>
+</div>
+<h3 class="font-section-title text-section-title text-on-surface">Enterprise Design System</h3>
+<p class="font-body-large text-body-large text-secondary">
+                            Established a multi-platform design system for a Fortune 500 company, unifying 12 disparate products and cutting development time for new features by 45%.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-[#FDECEF] text-[#A30F2D] rounded-md font-metadata text-metadata">Tailwind CSS</span>
+<span class="px-3 py-1 bg-[#FDECEF] text-[#A30F2D] rounded-md font-metadata text-metadata">Storybook</span>
+<span class="px-3 py-1 bg-[#FDECEF] text-[#A30F2D] rounded-md font-metadata text-metadata">Figma Tokens</span>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-bold group" href="#">
+                            Read Full Study
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities -->
+<section class="py-section-padding-lg bg-white" id="skills">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="mb-16 text-center">
+<h2 class="font-section-title text-section-title text-on-surface mb-4">Core Capabilities</h2>
+<p class="font-body-large text-body-large text-secondary mx-auto max-w-2xl">Specialized expertise at the intersection of code and commerce.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-10 border border-outline-variant rounded-lg space-y-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">architecture</span>
+<h4 class="font-section-title-mobile text-section-title-mobile">Frontend Architecture</h4>
+<p class="font-body-base text-body-base text-secondary">Scalable React/Next.js architectures designed for performance, maintainability, and enterprise-grade security.</p>
+</div>
+<div class="p-10 border border-outline-variant rounded-lg space-y-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">strategy</span>
+<h4 class="font-section-title-mobile text-section-title-mobile">Product Strategy</h4>
+<p class="font-body-base text-body-base text-secondary">Helping founders define MVPs, prioritize roadmaps, and align technical decisions with business objectives.</p>
+</div>
+<div class="p-10 border border-outline-variant rounded-lg space-y-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">design_services</span>
+<h4 class="font-section-title-mobile text-section-title-mobile">UX Engineering</h4>
+<p class="font-body-base text-body-base text-secondary">Bridging the gap between design and engineering with high-fidelity prototypes and robust component libraries.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience -->
+<section class="py-section-padding-lg bg-surface-container-low" id="experience">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div>
+<h2 class="font-section-title text-section-title text-on-surface mb-4">Experience</h2>
+<p class="font-body-large text-body-large text-secondary">A decade of building for the web, from early-stage startups to global technology leaders.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold mt-8 border-b-2 border-primary pb-1" href="#">
+                            Download Full Resume
+                            <span class="material-symbols-outlined">download</span>
+</a>
+</div>
+<div class="md:col-span-2 space-y-8">
+<div class="bg-white p-8 rounded-lg border border-outline-variant relative overflow-hidden group">
+<div class="absolute left-0 top-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-section-title-mobile text-section-title-mobile">Senior Product Consultant</h4>
+<span class="font-metadata text-metadata text-secondary">2021 — PRESENT</span>
+</div>
+<p class="text-primary font-bold mb-4">Independent Practice</p>
+<p class="font-body-base text-body-base text-secondary">Advising B2B SaaS companies on frontend architecture and product lifecycle management. Delivered projects for 12+ clients including series A-D scaleups.</p>
+</div>
+<div class="bg-white p-8 rounded-lg border border-outline-variant relative overflow-hidden group">
+<div class="absolute left-0 top-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-section-title-mobile text-section-title-mobile">Senior Frontend Engineer</h4>
+<span class="font-metadata text-metadata text-secondary">2018 — 2021</span>
+</div>
+<p class="text-primary font-bold mb-4">Google (Cloud Platform)</p>
+<p class="font-body-base text-body-base text-secondary">Led the modernization of internal cloud tooling. Mentored junior engineers and standardized React patterns across the department.</p>
+</div>
+<div class="bg-white p-8 rounded-lg border border-outline-variant relative overflow-hidden group">
+<div class="absolute left-0 top-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-section-title-mobile text-section-title-mobile">Full Stack Developer</h4>
+<span class="font-metadata text-metadata text-secondary">2015 — 2018</span>
+</div>
+<p class="text-primary font-bold mb-4">Stripe (Contract)</p>
+<p class="font-body-base text-body-base text-secondary">Worked on core payment components and documentation interfaces. Focused on accessibility and internationalization.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-section-padding-lg bg-white">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative aspect-square">
+<img alt="Benedicta Davour Portrait" class="w-full h-full object-cover rounded-2xl shadow-xl grayscale" data-alt="A professional, high-end corporate portrait of a confident Black woman engineer in a bright, modern office setting. She is wearing a professional minimalist outfit. The background is softly blurred, showing a high-tech workspace with soft bokeh from distant computer screens and plants. The overall lighting is warm, flattering, and exudes competence and business maturity, with the brand's primary red reflected in a small piece of abstract art in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSW4O01hNpGkQy7qmedGMvZTVxsqwxY8knNl7D5ryllB5b2qorjW_diIRgCeEz0ROIkUZRld15AcuNJ34nTYd8pfepXf43ezGLhORend3a71IQYKuCqYFpp_lPcveSS9PoBhPrLqsATMLQCDUkF3Wael-yzpzYCPzEVDG1oMjPXv1_DhOIYSuZFEbNA5-2LstCApV0Rkx3bHFHwzf2-4heHIqwHLQdNFWI5W6FBiaJRMepRLbAhMrKkabUwgKwhyyJbGpsR0x7j5k"/>
+<div class="absolute -bottom-8 -right-8 bg-primary-container p-10 rounded-lg text-on-primary-container hidden md:block">
+<p class="font-display-hero-mobile text-display-hero-mobile">"Execution is the only differentiator."</p>
+</div>
+</div>
+<div>
+<h2 class="font-section-title text-section-title text-on-surface mb-8">Why Work With Me?</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="bg-primary-fixed text-primary p-2 h-fit rounded-lg"><span class="material-symbols-outlined">analytics</span></div>
+<div>
+<h5 class="font-bold text-lg mb-1">Business-First Engineering</h5>
+<p class="text-secondary font-body-base">I don't just write code; I solve business problems. Every line of code is evaluated against its ROI and long-term impact on the product.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-primary-fixed text-primary p-2 h-fit rounded-lg"><span class="material-symbols-outlined">terminal</span></div>
+<div>
+<h5 class="font-bold text-lg mb-1">Deep Technical Expertise</h5>
+<p class="text-secondary font-body-base">With over 10 years in the industry, I have a deep understanding of the full stack, with a specialized focus on modern frontend ecosystems.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-primary-fixed text-primary p-2 h-fit rounded-lg"><span class="material-symbols-outlined">forum</span></div>
+<div>
+<h5 class="font-bold text-lg mb-1">Clear Communication</h5>
+<p class="text-secondary font-body-base">I believe in radical transparency and frequent updates. You will always know the status of the project and any potential blockers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding-lg bg-background" id="contact">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="font-section-title text-section-title text-on-surface mb-6">Let's build something remarkable.</h2>
+<p class="font-body-large text-body-large text-secondary mb-12">I'm currently accepting new consulting projects for Q3 2024. If you have a challenge that needs solving, I'd love to hear from you.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<a class="font-body-large text-on-surface hover:text-primary transition-colors" href="mailto:hello@benedicta.dev">hello@benedicta.dev</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<a class="font-body-large text-on-surface hover:text-primary transition-colors" href="#">Book a 30-min discovery call</a>
+</div>
+</div>
+<div class="flex gap-6 mt-12">
+<a class="w-10 h-10 flex items-center justify-center bg-white border border-outline-variant rounded-full text-secondary hover:text-primary transition-all" href="#">
+<span class="font-bold">in</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-white border border-outline-variant rounded-full text-secondary hover:text-primary transition-all" href="#">
+<span class="font-bold">git</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-white border border-outline-variant rounded-full text-secondary hover:text-primary transition-all" href="#">
+<span class="font-bold">x</span>
+</a>
+</div>
+</div>
+<div class="bg-white p-10 rounded-lg border border-outline-variant shadow-sm">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-metadata text-metadata text-secondary uppercase tracking-wider">Full Name</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-metadata text-metadata text-secondary uppercase tracking-wider">Email Address</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-metadata text-metadata text-secondary uppercase tracking-wider">Interest</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all">
+<option>Frontend Engineering</option>
+<option>Product Strategy Consulting</option>
+<option>Design System Development</option>
+<option>Other / General Inquiry</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-metadata text-metadata text-secondary uppercase tracking-wider">Message</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="How can I help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 rounded-lg font-bold text-body-large hover:bg-tertiary-container transition-all" type="submit">Send Inquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter py-section-padding-sm md:py-16">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-display-hero-mobile text-3xl font-bold text-on-surface">ami</span>
+<p class="font-metadata text-metadata text-secondary max-w-xs text-center md:text-left">
+                        Building the future of technical software through elegant engineering and strategic thinking.
+                    </p>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-secondary hover:text-primary transition-colors font-metadata text-metadata" href="https://www.linkedin.com">LinkedIn</a>
+<a class="text-secondary hover:text-primary transition-colors font-metadata text-metadata" href="https://www.github.com">GitHub</a>
+<a class="text-secondary hover:text-primary transition-colors font-metadata text-metadata" href="#">Upwork</a>
+<a class="text-secondary hover:text-primary transition-colors font-metadata text-metadata" href="#">Resume</a>
+</div>
+<div class="text-secondary font-metadata text-metadata">
+                    © Benedicta Davour. All rights reserved.
+                </div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant text-center">
+<p class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Minimalist. High-Density. Professional.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Fade in on scroll effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

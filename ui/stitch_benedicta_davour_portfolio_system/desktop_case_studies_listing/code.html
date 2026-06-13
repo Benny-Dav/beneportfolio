@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies | Benedicta Davour</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .case-study-card:hover .card-image {
+            transform: scale(1.02);
+        }
+        .chip-active {
+            background-color: #DC143C;
+            color: #FFFFFF;
+            border-color: #DC143C;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3b4",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-container-highest": "#d9e3f4",
+                      "surface-bright": "#f8f9ff",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e6bdbc",
+                      "surface-container": "#e5eeff",
+                      "tertiary-container": "#ce3448",
+                      "on-primary-fixed": "#40000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#121c28",
+                      "surface-tint": "#bf0030",
+                      "on-surface": "#121c28",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-error": "#ffffff",
+                      "background": "#f8f9ff",
+                      "outline": "#916f6e",
+                      "on-secondary-container": "#656464",
+                      "primary-fixed": "#ffdad9",
+                      "surface-variant": "#d9e3f4",
+                      "surface-container-high": "#dfe9fa",
+                      "secondary": "#5f5e5e",
+                      "tertiary-fixed": "#ffdada",
+                      "primary-container": "#dc143c",
+                      "on-tertiary-fixed-variant": "#920024",
+                      "surface-dim": "#d1dbec",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary-container": "#fff1f0",
+                      "surface": "#f8f9ff",
+                      "on-tertiary-fixed": "#40000b",
+                      "secondary-container": "#e5e2e1",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#eef4ff",
+                      "inverse-primary": "#ffb3b3",
+                      "on-primary-fixed-variant": "#920022",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-surface": "#27313e",
+                      "tertiary": "#ab1832",
+                      "on-tertiary-container": "#fff1f1",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "primary": "#b1002c",
+                      "on-surface-variant": "#5c3f3f",
+                      "primary-fixed-dim": "#ffb3b3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max-width": "1200px",
+                      "section-padding-lg": "120px",
+                      "nav-height-mobile": "64px",
+                      "section-padding-sm": "64px",
+                      "nav-height-desktop": "72px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Inter"],
+                      "body-large": ["Inter"],
+                      "body-base": ["Inter"],
+                      "display-hero-mobile": ["Inter"],
+                      "section-title-mobile": ["Inter"],
+                      "section-title": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "metadata": ["Inter"]
+              },
+              "fontSize": {
+                      "display-hero": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-large": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-base": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-hero-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "section-title-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "section-title": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "metadata": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full h-[64px] md:h-[72px] bg-surface z-50 border-b border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-gutter h-full flex justify-between items-center">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined md:hidden text-primary">menu</span>
+<span class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface">ami</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#">Home</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#">Outcomes</a>
+<a class="text-primary font-bold font-body-base text-body-base" href="#">Case Studies</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#">Experience</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#">Skills</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-body-base text-body-base" href="#">Writing</a>
+<a class="px-6 py-2 bg-primary-container text-on-primary-container rounded-lg font-metadata text-metadata hover:bg-tertiary-container transition-all" href="#">Contact</a>
+</nav>
+<span class="material-symbols-outlined md:hidden text-primary">mail</span>
+</div>
+</header>
+<main class="pt-[nav-height-desktop] pb-section-padding-lg">
+<!-- Hero / Header Section -->
+<section class="max-w-container-max-width mx-auto px-gutter pt-20 pb-12">
+<div class="max-w-3xl">
+<h1 class="font-display-hero text-display-hero text-on-surface mb-6">Case Studies</h1>
+<p class="font-body-large text-body-large text-secondary">
+                    Bridging the gap between technical complexity and business growth. These selected works showcase deep-dives into product architecture, frontend engineering, and strategic problem-solving.
+                </p>
+</div>
+</section>
+<!-- Filter Row -->
+<section class="sticky top-[72px] z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant py-4 mb-16">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="flex flex-wrap items-center gap-3">
+<button class="chip-active px-5 py-2 rounded-full border border-outline text-metadata font-metadata transition-all">All Projects</button>
+<button class="px-5 py-2 rounded-full border border-outline text-secondary hover:border-primary hover:text-primary transition-all text-metadata font-metadata">Frontend Engineering</button>
+<button class="px-5 py-2 rounded-full border border-outline text-secondary hover:border-primary hover:text-primary transition-all text-metadata font-metadata">Product Strategy</button>
+<button class="px-5 py-2 rounded-full border border-outline text-secondary hover:border-primary hover:text-primary transition-all text-metadata font-metadata">Architecture</button>
+<button class="px-5 py-2 rounded-full border border-outline text-secondary hover:border-primary hover:text-primary transition-all text-metadata font-metadata">UI/UX Design</button>
+</div>
+</div>
+</section>
+<!-- Case Studies Grid -->
+<section class="max-w-container-max-width mx-auto px-gutter">
+<div class="grid grid-cols-1 gap-16">
+<!-- Card 1 -->
+<article class="case-study-card group flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="w-full md:w-1/2 overflow-hidden rounded-lg bg-surface-variant aspect-[16/10]">
+<img alt="Fintech Platform Dashboard" class="card-image w-full h-full object-cover transition-transform duration-500" data-alt="A clean, high-fidelity user interface of a financial dashboard displayed on a sleek laptop screen. The design features a professional color palette of pristine whites and deep slate blues, with vibrant red accents for key data visualizations. Soft, bright sunlight streams from the side, creating a modern, minimalist atmosphere in a high-end corporate workspace. The mood is sophisticated and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDabzkLSnFmLVj8eGATs7uAyVJT1Vf_gdpJmabSXvcuwC7e3OlDQErC5L0NKGUHjsCVrkP1-IR3SfV4nI5J-vTB6GQMb0v6o_tshlLPrArcxVCy83I5aqwPZvA9pl4MXWqLQ6anRE4yZ0jWUzMqxJaQOm3UqNUCIVXeEmN5eX2LESOLG5DtRzJ_H7mLy-JIHC77hxQxSyv7rsxh5U3cbjUOBIRhywwRXToR308zKs9o8Bv1OKhole3p_UxUbjy05BFoePjfpCN09Ns"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-md text-label-caps font-label-caps">FINTECH</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-md text-label-caps font-label-caps">2023</span>
+</div>
+<h2 class="font-section-title text-section-title text-on-surface leading-tight">ScalePay: Re-architecting for Global Expansion</h2>
+<div class="space-y-4 my-2">
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-1">THE PROBLEM</h4>
+<p class="text-body-base font-body-base text-secondary">A legacy monolith preventing multi-currency support and causing 12s dashboard load times during peak traffic.</p>
+</div>
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-1">BUSINESS VALUE</h4>
+<p class="text-body-base font-body-base text-secondary">Reduced TTM by 40% for new features and improved core vitals by 70%, leading to a $2.4M increase in processed volume.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">React / Next.js</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">TypeScript</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">AWS Lambda</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">GraphQL</span>
+</div>
+<div class="pt-6">
+<button class="flex items-center gap-2 text-primary font-bold font-body-base hover:underline transition-all">
+                                View Full Case Study 
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="case-study-card group flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="w-full md:w-1/2 overflow-hidden rounded-lg bg-surface-variant aspect-[16/10]">
+<img alt="HealthTech Data Visuals" class="card-image w-full h-full object-cover transition-transform duration-500" data-alt="Close-up of a high-resolution tablet screen displaying complex medical data visualizations and patient health trends. The interface is meticulously organized with a minimalist white background and striking red and grey data points. The lighting is bright and clinically clean, emphasizing technical precision. The overall aesthetic is one of business maturity and professional health technology innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpzEEJSxlaQuAAeQ-Tlf4-cPYB7dseygATsgD_H2dCNPQlOZpO8TK1NE2_dQHybK4jfFN7vxgolNsZQdwmv-iU3AyOVMMCCAOa-XfDgiIYoCAEiWr5DAbCJpQnGQg9_chr7_kv2i_3YP1YzerNysZcfBBW7Noy6yIQd_QK9rEBHKev__PoESdQhpuoGmSomKVrxGy9vBK17n9nbf9r7PJS3dhpRA29t3EaFZThAP6n0MnQfX3Qm0YynFehIZKMD-EjEoBI__RJOTM"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-md text-label-caps font-label-caps">HEALTHTECH</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-md text-label-caps font-label-caps">2024</span>
+</div>
+<h2 class="font-section-title text-section-title text-on-surface leading-tight">VitalStream: Real-time Patient Monitoring</h2>
+<div class="space-y-4 my-2">
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-1">THE PROBLEM</h4>
+<p class="text-body-base font-body-base text-secondary">Inconsistent data streaming from IoT devices causing delayed alerts in critical care units.</p>
+</div>
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-1">BUSINESS VALUE</h4>
+<p class="text-body-base font-body-base text-secondary">Implemented WebSockets architecture reducing latency to &lt;100ms. Resulted in 15% better triage efficiency in pilot hospitals.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">Rust</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">WebAssembly</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">React Native</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">MQTT</span>
+</div>
+<div class="pt-6">
+<button class="flex items-center gap-2 text-primary font-bold font-body-base hover:underline transition-all">
+                                View Full Case Study 
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="case-study-card group flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-outline hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300">
+<div class="w-full md:w-1/2 overflow-hidden rounded-lg bg-surface-variant aspect-[16/10]">
+<img alt="E-commerce Analytics" class="card-image w-full h-full object-cover transition-transform duration-500" data-alt="An ultra-modern, flat lay of a mobile design system for an enterprise e-commerce platform. The image showcases clean typography, structured grids, and a sophisticated red-on-white color palette. The setting is a bright, minimalist studio with neutral grey shadows. The lighting is perfectly diffused, highlighting the structural integrity and technical precision of the design work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqKo53GBjvHwRBdZAWTV0FNSrM1VfBcaAip452ZoBG_hlkuYXJ7n75WdbZb5A7l7M2WE5tGPC7UkUFR_ZEos_ub52Cp-C7YA-GKj-Mc3sJxm0W_5xtWxO9WkO5NAI0cRv9khbpaogPLG04IZDIyVonmFmBwws26sjJ8pzBgbMM2kbm2Rd0uBQti2ZTvB7FRdMHr4Rie5LGg6i3jip8TvHrY3Y5TJw46rGjFbsAbKDqoC5QLUXxpShUOXixhd495NBx8Dfi1KfTfj0"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-md text-label-caps font-label-caps">E-COMMERCE</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-md text-label-caps font-label-caps">2022</span>
+</div>
+<h2 class="font-section-title text-section-title text-on-surface leading-tight">ModaSync: Multi-channel Inventory Engine</h2>
+<div class="space-y-4 my-2">
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-1">THE PROBLEM</h4>
+<p class="text-body-base font-body-base text-secondary">Inventory drift across 5 different sales channels leading to overselling and customer dissatisfaction.</p>
+</div>
+<div>
+<h4 class="text-label-caps font-label-caps text-primary mb-1">BUSINESS VALUE</h4>
+<p class="text-body-base font-body-base text-secondary">Centralized source of truth with 100% inventory accuracy and automated reconciliation, saving $400k annually in overhead.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 pt-4">
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">Node.js</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">Redis</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">PostgreSQL</span>
+<span class="bg-[#FDECEF] text-[#A30F2D] px-3 py-1 rounded-md text-metadata font-metadata">Shopify API</span>
+</div>
+<div class="pt-6">
+<button class="flex items-center gap-2 text-primary font-bold font-body-base hover:underline transition-all">
+                                View Full Case Study 
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max-width mx-auto px-gutter mt-32">
+<div class="bg-primary-container rounded-2xl p-12 text-center text-on-primary-container relative overflow-hidden">
+<!-- Background decorative effect -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute -top-24 -left-24 w-64 h-64 border-[40px] border-white rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 border-[40px] border-white rounded-full"></div>
+</div>
+<h3 class="font-section-title text-section-title mb-6 relative z-10">Have a complex project in mind?</h3>
+<p class="font-body-large text-body-large opacity-90 max-w-2xl mx-auto mb-10 relative z-10">
+                    I help companies solve structural engineering challenges and build high-performance products. Let's discuss your roadmap.
+                </p>
+<div class="flex justify-center gap-4 relative z-10">
+<button class="px-8 py-4 bg-surface text-primary font-bold rounded-lg hover:scale-105 transition-all shadow-lg">Schedule a Strategy Call</button>
+<button class="px-8 py-4 border border-surface text-surface font-bold rounded-lg hover:bg-surface/10 transition-all">Download Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-section-padding-sm md:py-section-padding-lg">
+<div class="max-w-container-max-width mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps font-bold text-on-surface">AMI / BENEDICTA DAVOUR</span>
+<p class="font-metadata text-metadata text-secondary">© Benedicta Davour. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all" href="#">LinkedIn</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all" href="#">GitHub</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all" href="#">Upwork</a>
+<a class="font-metadata text-metadata text-secondary hover:text-primary transition-all" href="#">Resume</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        // Simple logic for chip selection
+        const filterChips = document.querySelectorAll('button[class*="rounded-full"]');
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                filterChips.forEach(c => {
+                    c.classList.remove('chip-active');
+                    c.classList.remove('bg-primary-container');
+                    c.classList.remove('text-on-primary-container');
+                    c.classList.add('text-secondary');
+                });
+                chip.classList.add('chip-active');
+                chip.classList.remove('text-secondary');
+            });
+        });
+
+        // Intersection observer for fade-in effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.case-study-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>
