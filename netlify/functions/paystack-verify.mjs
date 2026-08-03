@@ -33,7 +33,8 @@ export const handler = async (event) => {
       amount: transaction.amount,
       email: transaction.customer?.email,
     });
-  } catch {
+  } catch (error) {
+    console.error('Paystack verification failed:', error);
     return response(500, { message: 'Unable to verify the sponsorship.' });
   }
 };

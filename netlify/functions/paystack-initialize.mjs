@@ -1,3 +1,5 @@
+import { randomUUID } from 'node:crypto';
+
 const RATE_GHS = 150;
 const ALLOWED_TIMES = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
 
@@ -27,7 +29,7 @@ export const handler = async (event) => {
     if (!validDate || startIndex < 0 || endIndex < 0 || duration < 1) return response(400, { message: 'The booking details are invalid.' });
 
     const amount = duration * RATE_GHS * 100;
-    const reference = `BAD-${Date.now()}-${crypto.randomUUID().slice(0, 8)}`;
+    const reference = `BAD-${Date.now()}-${randomUUID().slice(0, 8)}`;
     const siteUrl = process.env.URL || event.headers.origin;
     if (!siteUrl) return response(500, { message: 'The booking callback URL is not configured.' });
 
@@ -60,7 +62,8 @@ export const handler = async (event) => {
       authorizationUrl: result.data.authorization_url,
       reference: result.data.reference,
     });
-  } catch {
+  } catch (error) {
+    console.error('Paystack initialization failed:', error);
     return response(500, { message: 'Unable to initialize the sponsorship.' });
   }
 };
