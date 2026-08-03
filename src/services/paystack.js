@@ -1,6 +1,14 @@
 const parseResponse = async (response) => {
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(data.message || 'Something went wrong. Please try again.');
+  const contentType = response.headers.get('content-type') || '';
+  const data = contentType.includes('application/json')
+    ? await response.json().catch(() => ({}))
+    : {};
+  if (!response.ok) {
+    const unavailable = response.status === 404 || !contentType.includes('application/json');
+    throw new Error(data.message || (unavailable
+      ? 'The Paystack server function is unavailable. Redeploy the latest site build and try again.'
+      : `Paystack could not be started (HTTP ${response.status}). Please try again.`));
+  }
   return data;
 };
 
