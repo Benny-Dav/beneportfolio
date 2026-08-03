@@ -1,12 +1,15 @@
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css'
 
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import BookADate from './pages/BookADate';
 
 
 function App() {
+  const { pathname } = useLocation();
+  const isDatePlanner = pathname.startsWith('/book-a-date');
 
   return (
     <>
@@ -15,10 +18,11 @@ function App() {
           path="/"
           element={<Home />}
         />
+        <Route path="/book-a-date" element={<BookADate />} />
         <Route path="*" element={<p>Page not Found</p>} />
       </Routes>
 
-      <Footer />
+      {!isDatePlanner && <Footer />}
 
     </>
   )

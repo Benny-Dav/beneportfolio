@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmed - ami</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#ffb3b3",
+                    "surface-tint": "#bf0030",
+                    "surface-container-low": "#f6f3f2",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#400014",
+                    "on-primary-container": "#fff1f0",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#ffdad9",
+                    "on-secondary-fixed": "#400010",
+                    "inverse-surface": "#313030",
+                    "primary": "#b1002c",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#1c1b1b",
+                    "surface": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#910030",
+                    "secondary-fixed": "#ffd9dc",
+                    "secondary-fixed-dim": "#ffb2ba",
+                    "tertiary-fixed": "#ffd9de",
+                    "outline": "#916f6e",
+                    "secondary-container": "#dc2a56",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary": "#b90140",
+                    "on-tertiary-fixed-variant": "#841f3b",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-primary-fixed": "#40000a",
+                    "primary-container": "#dc143c",
+                    "surface-container-high": "#ebe7e7",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#ffb3b3",
+                    "tertiary-fixed-dim": "#ffb2be",
+                    "tertiary-container": "#ba4963",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container": "#f0edec",
+                    "on-surface-variant": "#5c3f3f",
+                    "outline-variant": "#e6bdbc",
+                    "on-tertiary-container": "#fff2f2",
+                    "on-primary-fixed-variant": "#920022",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary": "#9a314b",
+                    "on-background": "#1c1b1b",
+                    "on-secondary-container": "#fffbff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "xl": "40px",
+                    "xs": "4px",
+                    "unit": "8px",
+                    "md": "16px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FFF8F9; /* Page Wash as per Style Guidance */
+            -webkit-tap-highlight-color: transparent;
+        }
+        .wine-shadow {
+            box-shadow: 0px 4px 20px rgba(122, 23, 52, 0.05);
+        }
+        .progress-bar {
+            height: 4px;
+            width: 100%;
+            background-color: #b1002c;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-surface overflow-x-hidden antialiased">
+<!-- Progress Indicator - Mandated by Style Guidance -->
+<div class="progress-bar"></div>
+<!-- TopAppBar Component -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-background flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-sm cursor-pointer hover:opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary font-headline-md text-headline-md">arrow_back</span>
+</div>
+<div class="style_brand_logo font-headline-md text-headline-md text-on-surface font-black">ami</div>
+<div class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95">
+            Back to portfolio
+        </div>
+</nav>
+<main class="min-h-screen pt-24 pb-32 px-md flex flex-col items-center justify-center">
+<!-- Celebration Section -->
+<div class="relative mb-xl">
+<div class="floating-element flex items-center justify-center">
+<div class="w-24 h-24 bg-primary-container rounded-full flex items-center justify-center relative animate-pulse">
+<span class="material-symbols-outlined text-on-primary-container text-5xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="absolute -right-2 -bottom-2 bg-secondary w-10 h-10 rounded-full flex items-center justify-center border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-on-secondary text-xl">verified</span>
+</div>
+<!-- Small Sparkles Decorations -->
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-secondary text-2xl animate-pulse">arrow_back_ios_new</span>
+<span class="material-symbols-outlined absolute top-0 -right-6 text-tertiary text-xl animate-bounce">arrow_back_ios_new</span>
+</div>
+</div>
+</div>
+<!-- Success Message -->
+<div class="text-center mb-xl">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-xs">It's a date! ♡</h1>
+<p class="font-body-md text-on-surface-variant max-w-[280px] mx-auto">Your booking has been successfully confirmed and processed.</p><p class="font-label-sm text-label-sm text-primary mt-xs italic">Until then, I'll be counting down the hours.</p>
+</div>
+<!-- Summary Card - Asymmetric Content Card -->
+<div class="w-full max-w-sm bg-surface-container-lowest border border-outline-variant rounded-xl wine-shadow overflow-hidden mb-xl">
+<div class="p-lg space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Date &amp; Time</p>
+<p class="font-body-md text-on-surface font-semibold">Saturday, Oct 26 • 6:00 PM</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Duration</p>
+<p class="font-body-md text-on-surface font-semibold">3 Hours Session</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Actions -->
+<!-- Closing Note -->
+<div class="mt-xl text-center">
+<p class="font-body-md text-on-surface-variant italic">Until then, take care. ✨</p>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="flex flex-col items-center justify-center w-full py-xl text-center bg-background">
+<div class="font-body-md text-body-md text-secondary mb-xs">Made with love and a lot of sparkle by Benedicta.</div>
+<div class="text-primary hover:text-primary transition-colors cursor-pointer active:scale-95">
+<span class="material-symbols-outlined">drive_file_rename_outline</span>
+</div>
+</footer>
+<!-- BottomNavBar Component (Destination Check: Payment Success is a terminal page, normally suppressed but following provided JSON anchors) -->
+<script>
+        // Simple micro-interaction for button feedback
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('scale-95');
+                setTimeout(() => this.classList.remove('scale-95'), 150);
+            });
+        });
+
+        // Toggle mobile nav active states based on scroll (mockup logic)
+        window.addEventListener('load', () => {
+            console.log('Payment Success Page Loaded');
+        });
+    </script>
+</body></html>
