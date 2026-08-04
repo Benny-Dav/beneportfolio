@@ -51,5 +51,20 @@
 .paystack-email input{display:block;width:100%;height:52px;margin-top:7px;padding:0 14px;border:1px solid var(--border);border-radius:9px;outline:none}
 .paystack-email input:focus{border:2px solid var(--crimson);box-shadow:0 0 0 3px rgba(177,0,44,.08)}
 .payment-error{padding:10px 12px;border-radius:8px;background:#fef3f2;color:#b42318!important;font-size:13px;text-align:left}
+.date-page--success{min-height:100dvh;overflow:visible}
+.date-page--success .success-main{min-height:0;padding:30px 18px 48px}
+.date-page--success .success-icon{width:92px;height:92px;margin-bottom:22px}
+.date-page--success .success-icon>svg{width:44px;height:44px}
+.date-page--success .success-icon span{width:36px;height:36px;border-width:3px}
+.date-page--success .success-icon span svg{width:18px}
+.date-page--success .success-main h1{font-size:30px;margin:7px}
+.date-page--success .success-main .success-thanks{margin:8px 0!important;color:var(--crimson)!important;font:700 21px "Hanken Grotesk",sans-serif!important}
+.date-page--success .success-main>p:not(.eyebrow){font-size:16px;line-height:1.45}
+.date-page--success .success-main em{margin:7px 0 22px}
+.date-page--success .success-main section{padding:10px 16px}
+.date-page--success .success-main section>div{gap:12px;margin:10px 0}
+.date-page--success .success-main section>div>svg{padding:9px}
+.date-page--success .success-main section strong{font-size:15px;overflow-wrap:anywhere}
+.date-page--success .success-signoff{margin:24px 0 16px!important}
 
 @media(min-width:600px){.step-title h1{font-size:40px}.time-pickers{gap:20px}.time-pickers select{height:64px;font-size:19px}.sponsor-card{padding:42px}.sponsor-card h1{font-size:42px}}

@@ -19,7 +19,8 @@ export const handler = async (event) => {
 
     const transaction = result.data;
     const duration = Number(transaction.metadata?.duration_hours);
-    const expectedAmount = duration * 150 * 100;
+    const hourlyRate = duration < 2 ? 200 : 150;
+    const expectedAmount = duration * hourlyRate * 100;
     const verified = transaction.status === 'success'
       && transaction.currency === 'GHS'
       && transaction.metadata?.sponsorship_type === 'preparation_and_safe_commute'
@@ -32,6 +33,12 @@ export const handler = async (event) => {
       status: transaction.status,
       amount: transaction.amount,
       email: transaction.customer?.email,
+      booking: {
+        date: transaction.metadata?.booking_date,
+        start: transaction.metadata?.start_time,
+        end: transaction.metadata?.end_time,
+        duration,
+      },
     });
   } catch (error) {
     console.error('Paystack verification failed:', error);

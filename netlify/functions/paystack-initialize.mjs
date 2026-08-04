@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 
-const RATE_GHS = 150;
+const getHourlyRate = (duration) => duration < 2 ? 200 : 150;
 const ALLOWED_TIMES = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
 
 const response = (statusCode, body) => ({
@@ -28,7 +28,7 @@ export const handler = async (event) => {
     if (!/^\S+@\S+\.\S+$/.test(email || '')) return response(400, { message: 'Enter a valid email address.' });
     if (!validDate || startIndex < 0 || endIndex < 0 || duration < 1) return response(400, { message: 'The booking details are invalid.' });
 
-    const amount = duration * RATE_GHS * 100;
+    const amount = duration * getHourlyRate(duration) * 100;
     const reference = `BAD-${Date.now()}-${randomUUID().slice(0, 8)}`;
     const siteUrl = process.env.URL || event.headers.origin;
     if (!siteUrl) return response(500, { message: 'The booking callback URL is not configured.' });

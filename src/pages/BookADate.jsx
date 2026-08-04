@@ -8,7 +8,7 @@ import {
 import { initializeSponsorship, verifySponsorship } from '../services/paystack';
 import './BookADate.css';
 
-const RATE = 150;
+const getHourlyRate = (duration) => duration < 2 ? 200 : 150;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const TIME_POINTS = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
 const BOOKING_STORAGE_KEY = 'book-a-date-pending-booking';
@@ -110,7 +110,7 @@ function TimeStep({ selectedDate, startTime, setStartTime, endTime, setEndTime, 
 }
 
 function SponsorshipStep({ booking, reveal, setReveal, proceed, changeDate, changeTime }) {
-  const total = booking.duration * RATE;
+  const total = booking.duration * getHourlyRate(booking.duration);
   return <main className="date-main date-main--sponsor">
     <section className="sponsor-card">
       {!reveal && <div className="step-title"><p className="eyebrow">STEP 3 OF 3</p><h1>Let me show up at my best.</h1></div>}
@@ -137,7 +137,7 @@ function PaystackModal({ booking, close }) {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  const total = booking.duration * RATE;
+  const total = booking.duration * getHourlyRate(booking.duration);
   const complete = async () => {
     if (!/^\S+@\S+\.\S+$/.test(email)) { setError('Enter a valid email address.'); return; }
     setLoading(true);
@@ -159,7 +159,7 @@ function PaystackModal({ booking, close }) {
   };
   return <div className="payment-overlay" role="dialog" aria-modal="true" aria-labelledby="paystack-title"><div className="payment-modal">
     {loading ? <><LoaderCircle className="spin" size={42} /><h2 id="paystack-title">Opening Paystack…</h2><p>Please wait while secure checkout is prepared.</p></>
-      : <><div className="payment-lock"><LockKeyhole /></div><p className="eyebrow">PAYSTACK</p><h2 id="paystack-title">Sponsor my preparation</h2><p>Continue to Paystack to securely sponsor my grooming and safe commute with GH₵{total.toFixed(2)}.</p><label className="paystack-email">Email address<input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" autoComplete="email" /></label>{error && <p className="payment-error" role="alert">{error}</p>}<button className="date-primary" onClick={complete}>Continue to Paystack</button><button className="modal-cancel" onClick={close}>Go back</button><small>Paystack requires your email to issue a receipt.</small></>}
+      : <><div className="payment-lock"><LockKeyhole /></div><p className="eyebrow">PAYSTACK</p><h2 id="paystack-title">Sponsor my preparation with GH₵{total.toFixed(2)} 💖</h2><p>Paystack needs your email to complete the sponsorship securely. You're almost there.</p><label className="paystack-email">Email address<input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" autoComplete="email" /></label>{error && <p className="payment-error" role="alert">{error}</p>}<button className="date-primary" onClick={complete}>Continue</button><button className="modal-cancel" onClick={close}>Go back</button></>}
   </div></div>;
 }
 
@@ -170,7 +170,7 @@ function VerificationOverlay({ error, retry }) {
 }
 
 function Success({ booking }) {
-  return <main className="success-main"><div className="success-icon"><Heart /><span><Check /></span></div><p className="eyebrow">DATE CONFIRMED ♡</p><h1>It's a date! ♡</h1><p>Your sponsorship is confirmed and our date is all set.</p><em>I'll be counting down the hours.</em><section>
+  return <main className="success-main"><div className="success-icon"><Heart /><span><Check /></span></div><p className="eyebrow">DATE CONFIRMED ♡</p><h1>It's a date! ♡</h1><p className="success-thanks">Thank you💖</p><p>Your sponsorship is confirmed and our date is all set.</p><em>I'll be counting down the hours.</em><section>
     <div><CalendarDays /><span><small>Date & time</small><strong>{formatDate(booking.date)} · {booking.start} – {booking.end}</strong></span></div>
     <div><Clock3 /><span><small>Duration</small><strong>{booking.duration} {booking.duration === 1 ? 'hour' : 'hours'} together</strong></span></div>
   </section><p className="success-signoff">Until then, take care. ♡</p><Link className="success-link" to="/">Back to portfolio</Link></main>;
@@ -187,6 +187,7 @@ export default function BookADate() {
   const [revealCost, setRevealCost] = useState(Boolean(restoredBooking));
   const [paystackOpen, setPaystackOpen] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [confirmedBooking, setConfirmedBooking] = useState(null);
   const [verification, setVerification] = useState({ loading: false, error: '' });
   const booking = useMemo(() => {
     const startIndex = TIME_POINTS.indexOf(startTime);
@@ -201,7 +202,13 @@ export default function BookADate() {
     if (!reference) return;
     setVerification({ loading: true, error: '' });
     try {
-      await verifySponsorship(reference);
+      const result = await verifySponsorship(reference);
+      if (result.booking?.date) {
+        setConfirmedBooking({
+          ...result.booking,
+          date: new Date(`${result.booking.date}T00:00:00`),
+        });
+      }
       sessionStorage.removeItem(BOOKING_STORAGE_KEY);
       window.history.replaceState({}, '', '/book-a-date');
       setVerification({ loading: false, error: '' });
@@ -214,7 +221,18 @@ export default function BookADate() {
 
   useEffect(() => { verifyCallback(); }, []); // Verify only the Paystack callback received on page load.
 
-  if (success) return <div className="date-page"><DateHeader step={3} onBack={() => setSuccess(false)} /><Success booking={booking} /></div>;
+  useEffect(() => {
+    const previousHtmlOverflow = document.documentElement.style.overflowY;
+    const previousBodyOverflow = document.body.style.overflowY;
+    document.documentElement.style.overflowY = 'auto';
+    document.body.style.overflowY = 'auto';
+    return () => {
+      document.documentElement.style.overflowY = previousHtmlOverflow;
+      document.body.style.overflowY = previousBodyOverflow;
+    };
+  }, []);
+
+  if (success) return <div className="date-page date-page--success"><DateHeader step={3} onBack={() => setSuccess(false)} /><Success booking={confirmedBooking || booking} /></div>;
   return <div className="date-page"><DateHeader step={step} onBack={() => goTo(step - 1)} />
     {step === 1 && <DateStep selectedDate={selectedDate} setSelectedDate={setSelectedDate} cursor={cursor} setCursor={setCursor} next={() => goTo(2)} />}
     {step === 2 && <TimeStep selectedDate={selectedDate} startTime={startTime} setStartTime={setStartTime} endTime={endTime} setEndTime={setEndTime} next={() => { setRevealCost(false); goTo(3); }} />}
