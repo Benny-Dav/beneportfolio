@@ -8,7 +8,7 @@ import {
 import { initializeSponsorship, verifySponsorship } from '../services/paystack';
 import './BookADate.css';
 
-const getHourlyRate = (duration) => duration < 2 ? 200 : 150;
+const getHourlyRate = (duration) => duration < 2 ? 300 : 200;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const TIME_POINTS = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
 const BOOKING_STORAGE_KEY = 'book-a-date-pending-booking';

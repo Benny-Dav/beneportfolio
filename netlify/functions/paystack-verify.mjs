@@ -19,7 +19,7 @@ export const handler = async (event) => {
 
     const transaction = result.data;
     const duration = Number(transaction.metadata?.duration_hours);
-    const hourlyRate = duration < 2 ? 200 : 150;
+    const hourlyRate = duration < 2 ? 300 : 200;
     const expectedAmount = duration * hourlyRate * 100;
     const verified = transaction.status === 'success'
       && transaction.currency === 'GHS'
