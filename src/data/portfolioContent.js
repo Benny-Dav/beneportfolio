@@ -206,6 +206,22 @@ export const additionalProjects = [
     deckUrl: "",
     liveUrl: "https://psa-website-omega.vercel.app/",
     access: "Public access",
+  },
+    {
+    slug: "vibetribe-recordlabel",
+    image: vibeTribeMobileImg,
+    title: "Website and Operations System for Record Label",
+    type: "Digital Experience Platform",
+    problem:
+      "Record Label needed a website to publicise its signees, and a consolidated funnel for preorder, streaming and collection of donations.",
+    solution:
+      "Modern website with custom in-app audio player and payment-integrated pre-order and donation features, and operational system with CMS and CRM to manage donations, artistes, tracks and demo submissions.",
+    value:
+      "Easily managed website, and one-stop-shop for managing fans,signees and donations. ",
+    stack: ["Payment Integration", "Custom CMS", "In-app Audio Player"],
+    deckUrl: "",
+    liveUrl: "https://able-music-1f3d4.web.app/",
+    access: "Public access",
   }
 ];
 
