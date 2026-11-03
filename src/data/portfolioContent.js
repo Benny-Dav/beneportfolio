@@ -18,6 +18,7 @@ import eduheroImage from "../assets/images/edu-hero.png";
 import aplHeroImage from "../assets/images/apl-hero.png"
 import zipImage1 from "../assets/images/zip-1.png"
 import psaHeroImage from "../assets/images/psaHero.png"
+import vibeTribeMobileImg from "../assets/images/vibeTribe-hero.png"
 
 
 export const proofStats = [
